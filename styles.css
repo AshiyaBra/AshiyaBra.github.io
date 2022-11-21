@@ -1,5 +1,5 @@
 body {
-    background: #E9C5EB; 
+    background: #D6ACF2; 
     font-family:Arial, Helvetica, sans-serif; 
 }
 .assignments {
@@ -11,35 +11,48 @@ width:22%;
 padding:10px;
 margin:10px;
 padding:20px 10px;
-background: #D296D9;
+background:#5A378C;
 border-radius: 5px;
 }
 
 .assignment img{
     width:200px;
     margin:10px;
-    border:4px dashed #AF73F0;
+    border:4px solid #D6ACF2;
     display:block;
     margin:auto;
 }
 .assignment img:hover{
-    border:4px dashed #AF73F0;
+    border:4px solid #392259;
 }
 
-h1 { 
-    color: darkcyan;
-    text-align: center;
+h1 
+{ 
+    color:#392259;
+    text-align:center;
 }
-h2{
-    text-align: center;
+
+h1:hover{
+    color:#FFF;
+}
+
+h2
+{
+    text-align:center;
 }
 
 
-a {
+a 
+{
     text-decoration: none;
-    color:#6AB9EB;
+    color:#FFF;
 }
 
-a:hover{
-    color:#fff
+a:hover
+{
+    color:#F2F0F2;
+}
+
+p{
+    color:#FFF
 }
