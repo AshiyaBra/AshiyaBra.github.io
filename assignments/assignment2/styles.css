@@ -1,0 +1,51 @@
+/*Structure*/
+body{
+    background-color: #F6DBE5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#nav{
+    background-color: #D91E75;
+    width: 17%;
+    padding:1%;
+    border-radius: 5%;
+}
+
+img{
+    background-color: #D91E75;
+    width: 15%;
+    padding:1%;
+    border-radius: 5px;
+}
+/*Table*/
+table{
+    border-collapse: collapse;
+    color:#EA6292; 
+}
+td, th {
+    border: 5px solid #D91E75;
+    padding:1%;
+}
+th{
+    background-color: #fff;
+}
+
+/*Typography*/
+h1,h2{
+    color: #B01455;
+    
+}
+p{
+    color:#D91E75;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+a:hover{
+    color:#A01145;
+}
+
+.bold{
+    font-size: 20px; 
+    color:darkred; 
+}

@@ -1,0 +1,29 @@
+/*Structure*/
+body{
+   background-color:#F2E9E9;
+}
+#context{
+    background-color: #ead4d6;
+    width: 35%;
+    padding:1%;
+    border-radius: 5px;
+}
+
+/*Typography*/
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1,h2,h3{
+   color:#BF8E97;
+}
+
+p{
+    color:#b57b80;
+}
+ul{
+    color:#BF8E97;
+}
+a{
+    color:#b57b80;
+    text-decoration:none;
+}
