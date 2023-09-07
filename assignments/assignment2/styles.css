@@ -1,13 +1,20 @@
 /*Structure*/
 body{
-    background-color: #F6DBE5;
+    background: url(images/pinl.jpg);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    border: 5px;
+    border-color: #EA6292;
+    
+  
 }
+
 #nav{
     background-color: #D91E75;
     width: 17%;
     padding:1%;
     border-radius: 5%;
+    text-align: center;
 }
 
 img{
@@ -24,6 +31,7 @@ table{
 td, th {
     border: 5px solid #D91E75;
     padding:1%;
+    text-align: center;
 }
 th{
     background-color: #fff;
