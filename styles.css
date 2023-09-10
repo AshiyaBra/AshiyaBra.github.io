@@ -2,12 +2,24 @@
 body{
    background-color:#F2E9E9;
 }
-#context{
-    background-color: #ead4d6;
-    width: 35%;
-    padding:1%;
-    border-radius: 5px;
+h1, h2{
+    text-align: center;
 }
+.column1 img, .column2 img, .column3 img, .column4 img, .column5 img{
+max-width: 50%;
+
+}
+.column1 p, .column2 p, .column3 p, .column4 p, .column5 p{
+text-align: center;
+
+}
+.padded-area{
+padding: 10px;
+background-color: #ead4d6;
+margin: 5px;
+padding-bottom: 10px;
+}
+
 
 /*Typography*/
 body{
@@ -16,14 +28,35 @@ body{
 h1,h2,h3{
    color:#BF8E97;
 }
-
 p{
     color:#b57b80;
+    text-align: center;
 }
-ul{
-    color:#BF8E97;
-}
-a{
+.column1 a, .column2 a, .column3 a, .column4 a, .column5 a{
     color:#b57b80;
     text-decoration:none;
+    
+}
+.foot{
+    text-align: center;
+}
+/*Larger Resolutions*/
+@media(min-width: 900px) 
+{
+    .flex-container {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+      }
+      
+  .column1, .column2, .column3, .column4, .column5{
+    flex: 1;
+    margin: 10px;
+  }
+  .column1, .column2, .column3, .column4, .column5{
+    display: flex;
+    margin: 10px;
+  }
+
 }
