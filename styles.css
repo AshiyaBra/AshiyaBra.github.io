@@ -22,7 +22,10 @@ padding-bottom: 10px;
 .column1 li, .column2 li, .column3 li, .column4 li, .column5 li{
     list-style-type: none;
 }
-
+img {
+    width: 100%;
+    align-self: center;
+}
 
 /*Typography*/
 body{

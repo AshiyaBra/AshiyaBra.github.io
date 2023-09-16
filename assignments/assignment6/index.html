@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Care Bears</title>
+        <link rel="stylesheet" href="styles.css"> 
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        <header id="main-header">
+            <h1>Build your own Care Bear</h1>
+        </header>
+
+       <main id="main-content">
+            <div class="flex-container">
+                 <section class="column1 padded-area">
+                    <h3>Pick your Care Bear</h3>
+                    <button id="show-pic">Show</button>
+                    <button id="hide-pic">Hide</button><br>
+                    <img id="care" src="images/carebears.jpg" class="hide">
+                </section>
+
+                <section class="column2 padded-area">
+                    <h3>Animate</h3>
+                    <button id="button-move">Move Circle</button><br>
+                    <div id="circle"></div>
+                </section>
+
+                <section class="column3 padded-area">
+                    <h3>Build Care Bear</h3>
+
+                    <div class="input">
+                        <label for="txt-care-bear-name">Care Bear Name:</label>
+                        <input type="text" id="txt-care-bear-name">
+                    </div>
+                    <div class="input">
+                        <label for="txt-comment">Comment:</label>
+                        <input type="text" id="txt-comment">
+                    </div>
+                    <div class="input">
+                        <label for="txt-age">Age:</label>
+                        <input type="text" id="txt-age">
+                    </div>
+                    <div class="input">
+                    <label for="txt-creator-name">Creator Name:</label>
+                    <input type="text" id="txt-creator-name">
+                    </div>
+
+                    <button id="button-comment">Add Comment</button><br>
+                    <div id="comment-container"></div>
+                </section>
+            </div>
+        </main>
+    </body>
+
+    <footer class="foot">
+        <section class="padded-area">
+            <h2>End of Page</h2>
+        </section>
+    </footer>
+
+</html>

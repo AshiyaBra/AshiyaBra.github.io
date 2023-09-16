@@ -1,0 +1,26 @@
+/*Structure*/
+body{
+
+}
+/* Horizontal Navagation */
+
+/*Main Naviagtion*/
+
+/*Typography*/
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.special{
+    background-color: lavender;
+    padding: 5px;
+    color: magenta;
+    border: 5px dotted lavenderblush;
+}
+.hide{
+    display:none;
+}
+
+/*Larger Resolution*/
+@media only screen and (min-width: 768px){
+   
+}
