@@ -1,0 +1,174 @@
+:root{
+    --background: #CFBFF8;
+    --mainbackg: #9D78FF;
+    --forms: #C078E9;
+    --num: 0%;
+    --gradient: red;
+
+    
+}
+
+/* Structure*/ 
+body{
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-header{
+    background-color: var(--mainbackg);
+    text-align:center;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.columns, #exercise2{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 2px;
+    background-color: #C078E9;
+}
+#exercise1, #exercise2 {
+    margin: auto;
+    padding: 20px;
+    max-width: 800px; 
+}
+#exercise1,
+#exercise2 {
+    display: none;
+}
+
+/* Got from chat gpt (could not figure it out).*/
+#exercise1:target,
+#exercise2:target {
+    display: block;
+}
+ /* Form - Exercise */
+
+ label {
+    width: 100px;
+    text-align: right;
+    padding: 5px;
+ }
+/* Exercise Navagation */
+#nav-exercise{
+    background-color: white;
+    text-align: center;
+}
+#nav-exercise a{
+    text-decoration: none;
+    padding: 5px;
+
+}
+#nav-exercise li{
+    list-style-type: none;
+    padding: 15px;
+}
+
+
+ /* Main Navagation */
+ #main-nav{
+    background-color:  var(--mainbackg);
+    padding: 0px;
+   
+}
+
+#main-nav a{
+    text-decoration: none;
+    color:black;
+}
+
+#main-nav a:hover , #nav-exercise a:hover{
+    text-decoration: none;
+    color:#CF08F5;
+}
+
+#main-nav ul{
+    padding-left: 0px;
+}
+#main-nav li{
+    list-style-type: none;
+    padding: 5px;
+}
+#rectangle.color {
+    width: 70px;
+    height: 250px;
+    background: linear-gradient(0deg, var(--gradient) 25%, var(--gradient) 50%, white 75%, white 100% );
+}
+/* Themometer */
+#rectangle{
+   background-color: azure;
+    width: 70px;
+    height: 250px;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+}
+.button-container label{
+    width: auto;
+    margin-right:10px; 
+}
+
+/*Typography*/
+h1{
+    text-align: center;
+}
+
+/* Hamburger */
+#hamburger div{
+    width: 30px;
+    height: 5px;
+    background-color: #C078E9;
+    margin: 5px 0;
+}
+
+.hide-small{
+    display: none;
+}
+
+/*Larger Resolutions*/
+@media(min-width: 900px) 
+{
+  .flex-container{
+    display: flex; 
+    justify-content: space-between;
+  }
+
+  .column1{
+    flex:1;
+    margin: 10px;
+    padding:15px;
+    border: 1px solid white;
+    text-align: center;
+    flex-direction: column;
+ }
+
+ #hamburger{
+    display: none;
+ }
+
+ .hide-small{
+    display: block;
+ }
+
+ #main-nav ul,.flex-container{
+    display: inline-flex; 
+}
+
+#main-nav li, #nav-exercise li{
+    display: inline-flex;
+}
+.rec-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-flex{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+ 
+}

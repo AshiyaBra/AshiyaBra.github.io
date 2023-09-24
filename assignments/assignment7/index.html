@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forms</title>
+        <link rel="stylesheet" href="styles.css"> 
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+     <header id="main-header">
+            <h1>If Statement Assignment</h1>
+        <nav id="main-nav">
+            <div id="hamburger" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-items" class="hide-small">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#">Pictures</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="nav-exercise">
+        <ul>
+            <li><a href="#exercise1">Exercise 1</a></li>
+            <li><a href="#exercise2">Exercise 2</a></li>
+        </ul>
+    </nav>
+
+       <main id="main-content">
+            <section id="exercise1">
+                <div class="columns">
+                    <h2>Who's the Oldest?</h2>
+                <p>
+                    <label for="txt-name-one">Name 1:</label>
+                    <input type="text" id="txt-name-one">
+                </p>
+                <p>
+                    <label for="txt-age-one">Age 1:</label>
+                    <input type="text" id="txt-age-one">
+                </p>
+                <p>
+                    <label for="txt-name-two">Name 2:</label>
+                    <input type="text" id="txt-name-two">
+                </p>
+                <p>
+                    <label for="txt-age-two">Age 2:</label>
+                    <input type="text" id="txt-age-two">
+                </p>
+                <p>
+                    <label for="txt-name-three">Name 3:</label>
+                    <input type="text" id="txt-name-three">
+                </p>
+                <p>
+                    <label for="txt-age-three">Age 3:</label>
+                    <input type="text" id="txt-age-three">
+                </p>
+                <button id="button-compare" class="button">Compare Ages</button>
+                <div id="result"></div>
+                <div id="error" class="error hiden"></div>
+                </div>
+            </section>
+
+            <section id="exercise2">
+                <h2>Fund Raising</h2>
+                <h3>Goal is 10,000.00</h3>
+                <div class="button-container">
+                <p>
+                    <label for="txt-amount">Fund Raised:</label>
+                    <input type="text" id="txt-amount">
+                    <div id="error" class="error hidden"></div>
+                </p>
+                <button id="button-themometer">Display</button>
+                </div>
+                <div class="rec-flex">
+                    <div id="rectangle" class="color"></div>
+                </div>
+            </section>
+
+            
+        </main>
+    </body>
+</html>
