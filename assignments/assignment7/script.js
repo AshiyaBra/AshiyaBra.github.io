@@ -3,21 +3,23 @@ const toggleNav = () => {
 };
 
 
-const displayAmount = () =>{
-    const amount = parseInt(document.getElementById("txt-amount"));
+const displayAmount = () => {
+    
+    const amount = parseInt(document.getElementById("txt-amount").value);
+    document.getElementById("rectangle").classList.add("color");
     const root = document.querySelector(":root");
 
-    if(amount >= 0 && amount <= 5000){
-        root.style.setProperty("--numS", "25%");
-    }else if(amount > 5000 && amount <= 7500){
-        root.style.setProperty("--num", "50%");
-    }else if(amount > 7500 && amount <= 9999){
+    if (amount > 0 && amount <= 4999) {
         root.style.setProperty("--num", "75%");
-    }else if(amount == 10000 && amount > 0){
+    } else if (amount > 4999 && amount <= 7499) {
+        root.style.setProperty("--num", "50%");
+    } else if (amount > 7499 && amount <= 9999) {
+        root.style.setProperty("--num", "25%");
+    } else if (amount === 10000 && amount > 0) {
         root.style.setProperty("--num", "100%");
     }
- 
 };
+
 
 
 

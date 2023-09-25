@@ -3,7 +3,7 @@
     --mainbackg: #9D78FF;
     --forms: #C078E9;
     --num: 0%;
-    --gradient: red;
+    --gradient: linear-gradient(180deg,white var(--num) 0%, red var(--num), red  var(--num) 100%);
 
     
 }
@@ -65,7 +65,6 @@ body{
     padding: 15px;
 }
 
-
  /* Main Navagation */
  #main-nav{
     background-color:  var(--mainbackg);
@@ -90,16 +89,14 @@ body{
     list-style-type: none;
     padding: 5px;
 }
-#rectangle.color {
-    width: 70px;
-    height: 250px;
-    background: linear-gradient(0deg, var(--gradient) 25%, var(--gradient) 50%, white 75%, white 100% );
-}
 /* Themometer */
 #rectangle{
-   background-color: azure;
+   background-color: white;
     width: 70px;
     height: 250px;
+}
+#rectangle.color{
+    background: var(--gradient);
 }
 .button-container{
     display: flex;
