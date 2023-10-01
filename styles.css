@@ -52,12 +52,13 @@ p{
     .flex-container {
         display: flex;
         justify-content: space-between;
-        flex-wrap: nonwrap; 
+        flex-wrap: wrap; 
       }
       
   .column1, .column2, .column3, .column4, .column5{
     flex: 1;
     margin: 10px;
+    flex-wrap: wrap;
   }
   .column1, .column2, .column3, .column4, .column5{
         flex:1;
