@@ -1,15 +1,80 @@
 /* Structure */
 :root {
     --mainback: lavender; 
+    --left: 0%;
+    --height-amount: 0%;
+    --num: 0%;
+    --gradient: linear-gradient(180deg,white var(--num) 0%, red var(--num), red  var(--num) 100%);
+
+}
+body{
+    background-color: var(--mainback);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.flex-container{
+    width: 100%;
+    height: 200px;
+    padding: 1%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Running Man */ 
+.man-container{
+    width: 350px;
+    height:225px;
+    border-radius: 5%;
+    align-items: center;
+    background-color: white;
+}
+#run-man{
+    bottom: 0;
+    left: var(--left, 0);
+    transition: left 0.5s, content 0.5s;
+}
 
-/* Themometer */ 
+/* Thermometer */ 
+.thermometer{
+    background-color: white;
+    width: 70px;
+    height: 250px; 
+ }
+ .thermometer.color{
+     background: var(--gradient);
+ }
+ #fund-raise{
+    display: flex;
+    align-items: center;
+}
+.thermometer label{
+    width: auto;
+    margin-right:10px; 
+}
+.column2{
+    border-radius: 5%;
+    margin: 25px;
+    width: 400px;
+    height: 600px;
+    background-color: darkorchid;
+}
 
 /* Typograpghy */ 
+h1{
+    text-align: center;
+}
+h2{
+    text-align: start;
+}
 
 /* Larger Resolutions */ 
 @media only screen and (min-width: 600px) {
-
+    .flex-container{
+        display: flex;
+    }
 }
