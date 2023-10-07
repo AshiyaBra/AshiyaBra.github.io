@@ -14,7 +14,46 @@ body{
 .hide-small{
     display: none;
 }
-    
+
+#nav-items{
+  background-color: lavenderblush;
+}
+
+/* Navagation Pages */
+#nav-pages{
+  background-color: lavender;
+}
+
+/* Main Header */
+#main-header{
+  background-color: #C078E9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right img {
+  margin-left: 10px; 
+}
+
+#main-header input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px; 
+  align-items: center;
+}
+
 /*Larger Resolutions*/
 @media(min-width: 900px) 
 {
