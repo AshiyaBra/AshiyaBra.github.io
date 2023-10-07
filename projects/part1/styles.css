@@ -1,0 +1,52 @@
+/* Structure*/ 
+body{
+  background-color: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Hamburger */
+#hamburger div{
+    width: 30px;
+    height: 5px;
+    background-color: #C078E9;
+    margin: 5px 0;
+}
+
+.hide-small{
+    display: none;
+}
+    
+/*Larger Resolutions*/
+@media(min-width: 900px) 
+{
+  .flex-container{
+    display: flex; 
+    justify-content: space-between;
+  }
+
+  .column1{
+    flex:1;
+    margin: 10px;
+    padding:15px;
+    border: 1px solid white;
+    text-align: center;
+    flex-direction: column;
+ }
+
+ #hamburger{
+    display: none;
+ }
+
+ .hide-small{
+    display: block;
+ }
+
+ #main-nav ul,.flex-container{
+    display: inline-flex; 
+}
+
+#main-nav li{
+    display: inline-flex;
+}
+
+ 
+}

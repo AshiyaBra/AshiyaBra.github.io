@@ -1,0 +1,91 @@
+/* Structure */
+body{
+    background-color: lavender;
+}
+/*Flexbox Design */
+.flex-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+}
+
+.column1, .column2 {
+    flex: 2; 
+    width: auto;
+    padding: 20px;
+    border-radius: 10%;
+    margin: 20px;
+    border: 1px solid lavender;
+}
+
+.column1, .column2 {
+    background-color: darkorchid;
+}
+
+/* Typography */
+h1{
+    text-align: center;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Quotes */
+#quotes{
+    width: 100%;
+    text-align: center;
+}
+.quoteHide {
+    animation-name: quoteOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.quoteShow {
+    animation-name: quoteIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+
+@keyframes quoteOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes quoteIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Rainbow */
+#button-rainbow{
+    margin-top: 20px;
+    background-color: lightblue;
+    color: darkorchid;
+}
+.strips{
+    width: 100%;
+    height: 15px;
+    margin: 0px ;
+}
+
+.pot-of-gold {
+    display: block;
+    margin: 20px auto; 
+    max-width: 100%; 
+}
