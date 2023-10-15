@@ -32,7 +32,6 @@ const previewBox = () =>{
         }
     };
 };
-
 window.onload = () => {
     document.getElementById("hamburger").addEventListener("click", toggleNav);
     previewBox();
