@@ -30,10 +30,11 @@ body{
 
 #nav-pages a{
   text-decoration: none;
+  color:var(--hover);
 }
 
 #nav-pages a:hover{
-  color: var(--hover);
+  color: var(--main);
 }
 
 #nav-pages li {
