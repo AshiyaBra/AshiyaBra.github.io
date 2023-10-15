@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TTT- Add Device</title>
+        <link rel="stylesheet" href="styles.css"> 
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+     <header id="main-header">
+        <div class="header-content">
+            <a href="https://ashiyabra.github.io/projects/part2/index.html"><img src="images/tttlogo.png"></a>
+        </div>
+            <select id="menuDropdown">
+                <option>Menu</option>
+                <option value="Add Device">Add Device</option>
+                <option value="sales">Sales</option>
+                <option value="device type">Device Type</option>
+                <option value="popular devices">Popular Devices</option>
+            </select>
+        </nav>
+        <div class="header-right">
+            <input type="text" placeholder="What deivce are you looking for?">
+        </div>
+        <nav id="main-nav">
+            <div id="hamburger" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-pages">
+                <li><a href="https://ashiyabra.github.io/projects/part2/index.html">Home</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part2/tabletsphones.html">Tablets/Phones</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part2/cameraaudio.html">Camera/Audio</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part2/gamingsystems.html">Gaming Systems</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part2/computers.html">Computers</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <img src="images/shopping.png">
+        </div>
+    </header>
+
+    <main id="main-cat">
+
+        <div class="main-title">
+            <h1>Add a Device</h1>
+        </div>
+
+        <div id="main-container">
+        <div class="main-cat6">
+        <section>
+            Name: <input type="text">
+        </section>
+        <section>
+            Model: <input type="text number">
+        </section>
+        <section>
+            Authenticity: <input type="number">
+        </section>
+        <section>
+            Description: <input type="text">
+        </section>
+        <section>
+            <!-- Got form chapght-->
+            <input type="file" id="fileInput" accept=".jpg, .jpeg, .png, .pdf">
+        </section>
+        </div>
+        </div>
+
+    </main>
+
+    <footer id="footer">
+        <button id="button-view">View Add Device</button><br>
+        <div id="viewAll"></div>
+    </footer>
+    </body>
+</html>
+          

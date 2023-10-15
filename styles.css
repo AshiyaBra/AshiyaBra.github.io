@@ -1,47 +1,44 @@
 /*Structure*/
 body{
-   background-color:#F2E9E9;
+    background-color:#F2E9E9;
+ }
+ img{
+    max-width: fit-content;
+    align-items:center; 
+
 }
-h1, h2{
+
+ /*Typography */
+ body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1,h2,h3{
+   color:#BF8E97;
+   text-align: center;
+}
+p{
+    color:#b57b80;
     text-align: center;
 }
-.column5 img{
-max-width: 50%;
-
-}
-.column5 p{
-text-align: center;
-
-}
-.padded-area{
-padding: 10px;
-background-color: #ead4d6;
-margin: 5px;
-padding-bottom: 10px;
-}
- .column5 li{
-    list-style-type: none;
-}
-img {
-    width: 100%;
-    align-self: center;
+.foot{
+    text-align: center;
+    background-color: #ead4d6;
+    padding: 5px;
+    border-radius: 10px;
 }
 
-.column5{
+a{
+    color:#b57b80;
+    text-decoration:none;
+    text-align: center;
+}
+li{
+    list-style:none;
+    text-align: center;
     max-width: 100%;
 }
 /* Content*/
- #content2{
-    padding: 5px;
-    margin: 5px;
-    border-radius: 2px;
-    background-color: #ead4d6;
-}
-#content1, #content2 {
-    margin: auto;
-    padding: 20px;
-    max-width: 800px; 
-}
+
 #content1,
 #content2 {
     display: none;
@@ -51,7 +48,6 @@ img {
 #content2:target {
     display: flex;
 }
-
 /* Content Navagation */
 #nav-content{
     background-color: #ead4d6;
@@ -67,45 +63,29 @@ img {
     list-style-type: none;
     padding: 15px;
 }
-/*Typography*/
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-h1,h2,h3{
-   color:#BF8E97;
-}
-p{
-    color:#b57b80;
-    text-align: center;
-}
-.column5 a{
-    color:#b57b80;
-    text-decoration:none;
-    text-align: center;
-}
-.column5 li{
-    color:#b57b80;
-    text-decoration:none;
-    
-}
-.foot, h3{
-    text-align: center;
-}
-/*Larger Resolutions*/
-@media(min-width: 900px) 
-{
-    .flex-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; 
-      }
-      
-  .column5{
-    flex: 1;
-    margin: 10px;
-    flex-wrap: wrap;
-    text-align: center;
-  }
- 
 
+/* Columns*/
+.items section {
+    margin: 1%;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: #ead4d6;
+    text-align: center;
+}
+
+.items section.highlighted {
+    opacity: 100%;
+}
+
+/* Larger Resolutions */
+@media only screen and (min-width: 900px) {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: right;
+    }
+    .items section {
+        flex: 20%;
+        flex-grow: 0;
+    }
 }
