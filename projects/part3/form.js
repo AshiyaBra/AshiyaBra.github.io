@@ -16,6 +16,7 @@ const submit = (e) => {
         <p><span class="bold">Authenticity:</span> ${authenticity}%</p>
         <p><span class="bold">Condition:</span> ${condition}</p>
         <p><span class="bold">Description:</span> ${description}</p>
+        <p><span class="bold">Device added!</span></p>
     `;
 
     document.getElementById("form").classList.add("hidden");
