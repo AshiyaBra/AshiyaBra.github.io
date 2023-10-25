@@ -1,0 +1,52 @@
+/* Structure */
+:root {
+    --back: #F3D8FC;
+    --text: #9B3CA5;
+    --section: #E6B1F2;
+  }
+  
+  body {
+    background-color: var(--back);
+  }
+  
+  section {
+    border: 1px solid var(--text);
+    background-color: var(--section); 
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  /* Typograhy */
+  h1{
+    text-align: center;
+  }
+
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+  }
+
+  /* Hover */
+  img:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Movies */
+  #movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
