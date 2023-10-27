@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TTT- Add Device</title>
+        <link rel="stylesheet" href="form.css"> 
+        <script src="form.js"></script>
+    </head>
+
+    <body>
+
+     <header id="main-header">
+        <div class="header-content">
+            <a href="https://ashiyabra.github.io/projects/part3/index.html"><img src="images/tttlogo.png"></a>
+        </div>
+        <nav> 
+            <select id="menuDropdown">
+                <option>Menu</option>
+                <option value="Add Device">Add Device</option>
+                <option value="sales">Sales</option>
+                <option value="device type">Device Type</option>
+                <option value="popular devices">Popular Devices</option>
+            </select>
+        </nav>
+        <div class="header-right">
+            <input type="text" placeholder="What device are you looking for?">
+        </div>
+        
+        <nav id="main-nav">
+            <div id="hamburger" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-pages">
+                <li><a href="https://ashiyabra.github.io/projects/part3/index.html">Home</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/tabletsphones.html">Tablets/Phones</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/cameraaudio.html">Camera/Audio</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/gamingsystems.html">Gaming Systems</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/computer.html">Computers</a></li>
+                <li><a href="#">Add Device</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <img src="images/shopping.png">
+        </div>
+    </header>
+
+    <main>
+        <div class="main-title">
+            <h1>Add a Device</h1>
+        </div>
+    </main>
+   
+
+    <main class="main">
+
+        <div class="forms">
+
+        <section id="forms-section">
+
+            <form id="form">
+                Name:
+                <p> 
+                    <input type="text" id="name" name="name" required>
+                </p>
+                Release Date:
+                <p>
+                    <input type="date" id="date" required>
+                </p>
+                Authenticity:
+                <p>
+                    <input type="number" size="6" id="authenticity" min="1" max="100" value="0" required>
+                </p>
+                 Condition: 
+                <p>
+                    <input type="radio" name="condition" value="new"/>
+                    <label for="new" id="new">New</label>
+                </p>
+                <p>
+                    <input type="radio" name="condition" value="ok" />
+                    <label for="ok" id="ok">Ok</label>
+                </p>
+                <p>
+                    <input type="radio" name="condition" value="poor" />
+                    <label for="poor" id="poor">Poor</label>
+                </p>
+                Description:
+                <p>
+                    <textarea type="text" id="description" name="description"></textarea>
+                </p>
+                <p>
+                    <!-- Got form chapght-->
+                    <input type="file" id="fileInput" accept=".jpg, .jpeg, .png, .pdf" required >
+                </p>
+                <p>
+                    <button id="add" type="submit">Add Device</button>
+                </p>
+            </form>
+
+            <section id="success-message" class="hidden">
+                <p>Your device has been added!</p>
+            </section>
+        </div>
+        </section>
+    </main>
+
+    </body>
+</html>
