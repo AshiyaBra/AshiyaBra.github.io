@@ -37,51 +37,17 @@ const getInfo = async () => {
     const url = "https://ashiyabra.github.io/projects/part4/json/tabletsphones.json";
     try {
         const response = await fetch(url);
-        jsonData = await response.json();
-        displayTablets();
-        displayPhones();
-        displayTrendingProducts();
-        displaySales();
+        return await response.json();
     } catch (error) {
         console.error('Error:', error);
     }
 };
 
-const displayTablets = () => {
-    const tabletsData = jsonData.tablets; 
-    const tabletsContainer = document.getElementById("cat-tablets"); 
-    tabletsData.forEach((tablet) => {
-        const tabletSection = getSectionInfo(tablet);
-        tabletsContainer.appendChild(tabletSection);
-    });
-};
-
-
-const displayPhones = () => {
-    const phonesData = jsonData.phones; 
-    const phonesContainer = document.getElementById("cat-phones"); 
-    phonesData.forEach((phone) => {
-        const phoneSection = getSectionInfo(phone);
-        phonesContainer.appendChild(phoneSection);
-    });
-};
-
-const displayTrendingProducts = () => {
-    const productsData = jsonData.product; 
-    const productsContainer = document.getElementById("cat-trendingProducts"); 
-    productsData.forEach((product) => {
-        const productSection = getSectionInfo(product);
-        productsContainer.appendChild(productSection);
-    });
-};
-
-
-const displaySales = () => {
-    const salesData = jsonData.sale; 
-    const salesContainer = document.getElementById("cat-sales"); 
-    phonesData.forEach((sale) => {
-        const saleSection = getSectionInfo(sale);
-        salesContainer.appendChild(saleSection);
+const displayInfo = async () => {
+    const info = await getInfo();
+    const infoContainer = document.getElementById("cat-tabletsphone"); 
+    info.forEach((info) => {
+        infoContainer.appendChild(getSectionInfo(info));
     });
 };
 
@@ -111,6 +77,6 @@ const getSectionInfo = (info) => {
 window.onload = () => {
     document.getElementById("hamburger").addEventListener("click", toggleNav);
     previewBox();
-    getInfo();
+    displayInfo();
     
 };
