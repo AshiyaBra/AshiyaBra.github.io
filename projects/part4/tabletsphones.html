@@ -1,54 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>TTT- Tablets/Phones</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-</head>
+    <head>
+        <title>TTT- Tablets/Phones</title>
+        <link rel="stylesheet" href="styles.css"> 
+        <script src="script.js"></script>
+    </head>
 
-<body>
+    <body>
 
-<header id="main-header">
-    <div class="header-content">
-        <a href="https://ashiyabra.github.io/projects/part3/index.html"><img src="images/tttlogo.png"></a>
-    </div>
-    <nav id="main-nav">
-        <div id="hamburger" class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
+     <header id="main-header">
+        <div class="header-content">
+            <a href="https://ashiyabra.github.io/projects/part3/index.html"><img src="images/tttlogo.png"></a>
         </div>
-        <ul id="nav-pages" class="hide-small">
-            <li><a href="https://ashiyabra.github.io/projects/part3/index.html">Home</a></li>
-            <li><a href="#">Tablets/Phones</a></li>
-            <li><a href="https://ashiyabra.github.io/projects/part3/cameraaudio.html">Camera/Audio</a></li>
-            <li><a href="https://ashiyabra.github.io/projects/part3/gamingsystems.html">Gaming Systems</a></li>
-            <li><a href="https://ashiyabra.github.io/projects/part3/computer.html">Computers</a></li>
-            <li><a href="https://ashiyabra.github.io/projects/part3/input.html">Add Device</a></li>
-            <li><a href="https://ashiyabra.github.io/projects/part3/contactus.html">Contact us</a></li>
-        </ul>
-    </nav>
-</header>
+            <select id="menuDropdown">
+                <option>Menu</option>
+                <option value="Add Device">Add Device</option>
+                <option value="sales">Sales</option>
+                <option value="device type">Device Type</option>
+                <option value="popular devices">Popular Devices</option>
+            </select>
+        </nav>
+        <div class="header-right">
+            <input type="text" placeholder="What deivce are you looking for?">
+        </div>
+        <nav id="main-nav">
+            <div id="hamburger" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-pages" class="hide-small">
+                <li><a href="https://ashiyabra.github.io/projects/part3/index.html">Home</a></li>
+                <li><a href="#">Tablets/Phones</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/cameraaudio.html">Camera/Audio</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/gamingsystems.html">Gaming Systems</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/computer.html">Computers</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/input.html">Add Device</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/part3/contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <img src="images/shopping.png">
+        </div>
+    </header>
 
-<div id="preview-back">
-    <div class="content" style="opacity: 1;">
-        <span class="close">&times;</span>
-        <img src="https://place-hold.it/200x200" />
-        <p>The vintage iPad, released in 2010, was a pioneering device that marked the beginning of the tablet era, featuring a 9.7-inch display and running on iOS 3. With its iconic design and limited processing power by today's standards, it serves as a nostalgic reminder of the early days of Apple's tablet innovation.</p>
+    <div id="preview-back">
+        <div class="content" style="opacity: 1;">
+            <span class="close">&times;</span>
+            <img src="https://place-hold.it/200x200" />
+            <p>The vintage iPad, released in 2010, was a pioneering device that marked the beginning of the tablet era, featuring a 9.7-inch display and running on iOS 3. With its iconic design and limited processing power by today's standards, it serves as a nostalgic reminder of the early days of Apple's tablet innovation.</p>
+        </div>
     </div>
-</div>
+    <main>
 
-<main>
-    <div id="cat-tabletsphone"></div>
+        <div id="cat-tabletsphones"></div>  
+
     <div class="main-title">
         <h1>Tablets and Phones</h1>
     </div>
-    <div id="cat-trendingProductssales"></div>
-</main>
 
-<footer id="footer">
-    <button id="button-view">View All Tablets and Phones</button><br>
-    <div id="viewAll"></div>
-</footer>
-</body>
+
+    <div id="cat-trendingProductsSales"></div>
+    </main>
+
+    <footer id="footer">
+        <button id="button-view">View All Tablets and Phones</button><br>
+        <div id="viewAll"></div>
+    </footer>
+    </body>
 </html>
+          

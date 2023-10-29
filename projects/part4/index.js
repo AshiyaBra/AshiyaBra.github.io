@@ -14,7 +14,7 @@ const getInfo = async () => {
 
 const displayInfo = async () => {
     const info = await getInfo();
-    const infoContainer = document.getElementById("main-content"); 
+    const infoContainer = document.getElementById("main-sales"); 
     info.forEach((info) => {
         infoContainer.appendChild(getSectionInfo(info));
     });

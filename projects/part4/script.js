@@ -34,7 +34,7 @@ const previewBox = () =>{
 };
 
 const getInfo = async () => {
-    const url = "https://ashiyabra.github.io/projects/part4/json/tabletsphones.json";
+    const url = "https://ashiyabra.github.io/projects/part4/json/tabletsphones1.json";
     try {
         const response = await fetch(url);
         return await response.json();
@@ -45,7 +45,7 @@ const getInfo = async () => {
 
 const displayInfo = async () => {
     const info = await getInfo();
-    const infoContainer = document.getElementById("cat-tabletsphone"); 
+    const infoContainer = document.getElementById("cat-trendingProductsSales"); 
     info.forEach((info) => {
         infoContainer.appendChild(getSectionInfo(info));
     });
@@ -57,8 +57,8 @@ const getSectionInfo = (info) => {
     const newPrice = document.createElement("p");
     newPrice.innerHTML = `<strong>New Price: </strong> ${info.newPrice}`;
 
-    const newOld = document.createElement("p");
-    newOld.innerHTML = `<strong>New Old: </strong> ${info.newOld}`;
+    const oldPrice = document.createElement("p");
+    oldPrice.innerHTML = `<strong>Old Price: </strong> ${info.oldPrice}`;
 
     const facts = document.createElement("p");
     facts.innerHTML = `<strong>Description: </strong> ${info.facts}`;
@@ -67,7 +67,7 @@ const getSectionInfo = (info) => {
     img.src = `https://ashiyabra.github.io/projects/part4/${info.image}`;
 
     section.appendChild(newPrice);
-    section.appendChild(newOld);
+    section.appendChild(oldPrice);
     section.appendChild(facts);
     section.appendChild(img);
 
