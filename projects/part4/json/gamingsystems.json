@@ -2,31 +2,19 @@
         "categories": [
             {
                 "title": "PlayStation",
-                "images": [
-                    "images/psp.jpg",
-                    "images/ps2.jpg"
-                ]
+                "images":"images/psp.jpg"
             },
             {
                 "title": "XBOX",
-                "images": [
-                    "images/xbox.jpg",
-                    "images/xbox1.jpg"
-                ]
+                "images": "images/xbox.jpg"
             },
             {
                 "title": "Nintendo",
-                "images": [
-                    "images/game.jpg",
-                    "images/gamenin.jpg"
-                ]
+                "images": "images/game.jpg"
             },
             {
                 "title": "Wii",
-                "images": [
-                    "images/wii.jpg",
-                    "images/wii1.jpg"
-                ]
+                "images": "images/wii.jpg"
             }
         ],
     "trending-products": [
