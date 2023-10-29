@@ -36,10 +36,10 @@ const getCategoryInfo = (category) => {
     const section = document.createElement("section");
 
     const title = document.createElement("h2");
-    title.innerHTML = `<strong>Name: </strong> ${category.title}`;
+    title.innerHTML = `${category.title}`;
 
     const img = document.createElement("img");
-    img.src = category.images[2];
+    img.src = category.images;
 
     section.appendChild(title);
     section.appendChild(img);
@@ -50,11 +50,11 @@ const getCategoryInfo = (category) => {
 const getTrendingProductInfo = (trendingProduct) => {
     const section = document.createElement("section");
 
-    const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: </strong> ${trendingProduct.name}`;
+    const title = document.createElement("h2");
+    title.innerHTML = ` ${trendingProduct.title}`;
     
     const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: </strong> $${trendingProduct.price}`;
+    price.innerHTML = `<strong>Price: </strong> ${trendingProduct.price}`;
 
     const description = document.createElement("p");
     description.innerHTML = `<strong>Description: </strong> ${trendingProduct.facts}`;
@@ -62,7 +62,7 @@ const getTrendingProductInfo = (trendingProduct) => {
     const img = document.createElement("img");
     img.src = trendingProduct.image;
 
-    section.appendChild(name);
+    section.appendChild(title);
     section.appendChild(price);
     section.appendChild(description);
     section.appendChild(img);
@@ -73,14 +73,11 @@ const getTrendingProductInfo = (trendingProduct) => {
 const getSaleInfo = (sale) => {
     const section = document.createElement("section");
 
-    const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: </strong> ${sale.name}`;
+    const title = document.createElement("h2");
+    title.innerHTML = ` ${sale.title}`;
     
-    const oldPrice = document.createElement("p");
-    oldPrice.innerHTML = `<strong>New Price: </strong> $${sale.oldPrice}`;
-
-    const newPrice = document.createElement("p");
-    newPrice.innerHTML = `<strong>Old Price: </strong> $${sale.newPrice}`;
+    const price = document.createElement("p");
+    price.innerHTML = `<strong> Price: </strong> ${sale.price}`;
 
     const description = document.createElement("p");
     description.innerHTML = `<strong>Description: </strong> ${sale.facts}`;
@@ -88,9 +85,8 @@ const getSaleInfo = (sale) => {
     const img = document.createElement("img");
     img.src = sale.image;
 
-    section.appendChild(name);
-    section.appendChild(oldPrice);
-    section.appendChild(newPrice);
+    section.appendChild(title);
+    section.appendChild(price);
     section.appendChild(description);
     section.appendChild(img);
     

@@ -2,31 +2,19 @@
     "categories": [
         {
             "title": "Dell",
-            "images": [
-                "images/dell.jpg",
-                "images/dell1.jpg"
-            ]
+            "images": "images/dell.jpg"
         },
         {
             "title": "HP",
-            "images": [
-                "images/hp2.jpg",
-                "images/hp3.jpg"
-            ]
+            "images":"images/hp2.jpg"
         },
         {
             "title": "MAC",
-            "images": [
-                "images/mac1.jpg",
-                "images/imac.jpg"
-            ]
+            "images":"images/mac1.jpg"
         },
         {
             "title": "ACER",
-            "images": [
-                "images/acer.jpg",
-                "images/acer1.jpg"
-            ]
+            "images": "images/acer.jpg"
         }
     ],
     "trending-products": [
