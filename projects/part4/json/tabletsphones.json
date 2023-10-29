@@ -13,9 +13,7 @@
         "image": "images/sam.jpg",
         "price": 35.00,
         "description": "Older Samsung tablets, such as the Galaxy Tab S2, were known for their slim and lightweight design, making them highly portable and easy to carry. However, their performance and software capabilities may be outdated compared to newer tablet models."
-      }
-    ],
-    "phones": [
+      },
       {
         "category": "Phones",
         "name": "Vintage Phone",
