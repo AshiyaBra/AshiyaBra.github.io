@@ -50,7 +50,6 @@ const displayInfo = async () => {
     info.products.forEach((product) => {
         infoContainer.appendChild(getProductInfo(product));
     });
-
     
     const trendingProductsContainer = document.getElementById("trending-products");
     info.trendingProducts.forEach((trendingProduct) => {
