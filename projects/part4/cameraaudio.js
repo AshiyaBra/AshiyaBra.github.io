@@ -16,10 +16,10 @@ const displayInfo = async () => {
     const info = await getInfo();
     const infoContainer = document.getElementById("cat-content"); 
 
-    
     info.products.forEach((product) => {
         infoContainer.appendChild(getProductInfo(product));
     });
+
 
 
     const trendingProductsContainer = document.getElementById("trending-products");
