@@ -2,39 +2,8 @@ const toggleNav = () => {
     document.getElementById("nav-pages").classList.toggle("hide-small");
 };
 
-const previewBox = () =>{
-    const back = document.getElementById("preview-back");
-    const content = document.querySelector(".content");
-
-    document.querySelectorAll(".items img").forEach((img) => {
-        img.onclick = () => {
-            const largeSrc = img.getAttribute("data-large-src");
-            document.querySelector(".content img").src = largeSrc;
-            back.style.display = "block";
-            content.classList.add("slideShow");
-
-            content.addEventListener("animationend", () => {
-                content.classList.remove("slideShow");
-                content.style.opacity = 1;
-            });
-        };
-    });
-
-    document.querySelector(".close").onclick = () => {
-        back.style.display = "none";
-        content.style.opacity = 0;
-    };
-
-    window.onclick = (event) => {
-        if (event.target == back) {
-            back.style.display = "none";
-            content.style.opacity = 0;
-        }
-    };
-};
-
 const getInfo = async () => {
-    const url = "https://ashiyabra.github.io/projects/part4/json/tabletsphones.json";
+    const url = "https://ashiyabra.github.io/projects/part4/json/gamingsystems.json";
     try {
         const response = await fetch(url);
         return await response.json();
@@ -45,49 +14,38 @@ const getInfo = async () => {
 
 const displayInfo = async () => {
     const info = await getInfo();
-    const infoContainer = document.getElementById("cat-content"); 
+    const infoContainer = document.getElementById("categories"); 
 
-    
-    info.products.forEach((product) => {
-        infoContainer.appendChild(getProductInfo(product));
+    // Access data by category name
+    info["categories"].forEach((category) => {
+        infoContainer.appendChild(getCategoryInfo(category));
     });
 
-
     const trendingProductsContainer = document.getElementById("trending-products");
-    info.trendingProducts.forEach((trendingProduct) => {
+    info["trending-products"].forEach((trendingProduct) => {
         trendingProductsContainer.appendChild(getTrendingProductInfo(trendingProduct));
     });
 
-    
     const salesContainer = document.getElementById("sales");
-    info.sales.forEach((sale) => {
+    info["sales"].forEach((sale) => {
         salesContainer.appendChild(getSaleInfo(sale));
     });
 };
 
-const getProductInfo = (product) => {
+const getCategoryInfo = (category) => {
     const section = document.createElement("section");
 
-    const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: </strong> ${product.name}`;
-
-    const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: </strong> $${product.price}`;
-
-    const description = document.createElement("p");
-    description.innerHTML = `<strong>Description: </strong> ${product.description}`;
+    const title = document.createElement("h2");
+    title.innerHTML = `<strong>Name: </strong> ${category.title}`;
 
     const img = document.createElement("img");
-    img.src = product.image;
+    img.src = category.images[2];
 
-    section.appendChild(name);
-    section.appendChild(price);
-    section.appendChild(description);
+    section.appendChild(title);
     section.appendChild(img);
 
     return section;
 };
-
 
 const getTrendingProductInfo = (trendingProduct) => {
     const section = document.createElement("section");
@@ -141,6 +99,5 @@ const getSaleInfo = (sale) => {
 
 window.onload = () => {
     document.getElementById("hamburger").addEventListener("click", toggleNav);
-    previewBox();
     displayInfo();
 };

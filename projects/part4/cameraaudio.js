@@ -16,11 +16,12 @@ const displayInfo = async () => {
     const info = await getInfo();
     const infoContainer = document.getElementById("cat-content"); 
 
+    
     info.products.forEach((product) => {
         infoContainer.appendChild(getProductInfo(product));
     });
 
-    
+
     const trendingProductsContainer = document.getElementById("trending-products");
     info.trendingProducts.forEach((trendingProduct) => {
         trendingProductsContainer.appendChild(getTrendingProductInfo(trendingProduct));
@@ -34,14 +35,13 @@ const displayInfo = async () => {
 };
 
 const getProductInfo = (product) => {
-   
     const section = document.createElement("section");
 
     const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: ${product.name}`;
+    name.innerHTML = `<strong>Name: </strong> ${product.name}`;
 
     const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: $${product.price}`;
+    price.innerHTML = `<strong>Price: </strong> $${product.price}`;
 
     const description = document.createElement("p");
     description.innerHTML = `<strong>Description: </strong> ${product.description}`;
@@ -59,14 +59,13 @@ const getProductInfo = (product) => {
 
 
 const getTrendingProductInfo = (trendingProduct) => {
-
     const section = document.createElement("section");
 
     const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: ${trendingProduct.name}`;
+    name.innerHTML = `<strong>Name: </strong> ${trendingProduct.name}`;
     
     const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: $${trendingProduct.price}`;
+    price.innerHTML = `<strong>Price: </strong> $${trendingProduct.price}`;
 
     const description = document.createElement("p");
     description.innerHTML = `<strong>Description: </strong> ${trendingProduct.facts}`;
@@ -83,17 +82,16 @@ const getTrendingProductInfo = (trendingProduct) => {
 };
 
 const getSaleInfo = (sale) => {
-    
     const section = document.createElement("section");
 
     const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: ${sale.name}`;
+    name.innerHTML = `<strong>Name: </strong> ${sale.name}`;
     
     const oldPrice = document.createElement("p");
-    oldPrice.innerHTML = `<strong>New Price: $${sale.oldPrice}`;
+    oldPrice.innerHTML = `<strong>New Price: </strong> $${sale.oldPrice}`;
 
     const newPrice = document.createElement("p");
-    newPrice.innerHTML = `<strong>Old Price: $${sale.newPrice}`;
+    newPrice.innerHTML = `<strong>Old Price: </strong> $${sale.newPrice}`;
 
     const description = document.createElement("p");
     description.innerHTML = `<strong>Description: </strong> ${sale.facts}`;
