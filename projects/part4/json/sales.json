@@ -1,0 +1,161 @@
+{
+    "sales": {
+      "tablets": [
+        {
+          "name": "iPad",
+          "price": "From $80.00",
+          "description": "The iPad, released in 2010, marked the beginning of the tablet era.",
+          "image": "images/ipad.jpg"
+        },
+        {
+          "name": "Samsung",
+          "price": "From $XX.XX",
+          "description": "Description of Samsung tablet.",
+          "image": "images/sam.jpg"
+        },
+        {
+          "name": "Others",
+          "price": "From $XX.XX",
+          "description": "Description of other tablets.",
+          "image": "images/tab1.jpg"
+        }
+      ],
+      "phones": [
+        {
+          "name": "Oldest",
+          "price": "From $XX.XX",
+          "description": "Description of the oldest phone.",
+          "image": "images/ph1.jpg"
+        },
+        {
+          "name": "Newest",
+          "price": "From $XX.XX",
+          "description": "Description of the newest phone.",
+          "image": "images/ph2.jpg"
+        },
+        {
+          "name": "Old",
+          "price": "From $XX.XX",
+          "description": "Description of an old phone.",
+          "image": "images/ph8.jpg"
+        }
+      ],
+      "camera": [
+        {
+          "name": "Kodak",
+          "price": "From $XX.XX",
+          "description": "Description of Kodak camera.",
+          "image": "images/kodak.jpg"
+        },
+        {
+          "name": "Canon",
+          "price": "From $XX.XX",
+          "description": "Description of Canon camera.",
+          "image": "images/can.jpg"
+        },
+        {
+          "name": "Others",
+          "price": "From $XX.XX",
+          "description": "Description of other cameras.",
+          "image": "images/cam4.jpg"
+        }
+      ],
+      "audio": [
+        {
+          "name": "Headphones",
+          "price": "From $XX.XX",
+          "description": "Description of headphones.",
+          "image": "images/sony.jpg"
+        },
+        {
+          "name": "Radios",
+          "price": "From $XX.XX",
+          "description": "Description of radios.",
+          "image": "images/retro.jpg"
+        },
+        {
+          "name": "Stereos",
+          "price": "From $XX.XX",
+          "description": "Description of stereos.",
+          "image": "images/stereo.jpg"
+        }
+      ],
+      "gamingSystems": [
+        {
+          "name": "PlayStation 3 (PS3)",
+          "price": "From $135.99",
+          "description": "Description of PlayStation 3 (PS3).",
+          "image": "images/ps3.jpg"
+        },
+        {
+          "name": "Xbox 360",
+          "price": "From $135.99",
+          "description": "Description of Xbox 360.",
+          "image": "images/360.jpg"
+        },
+        {
+          "name": "Wii",
+          "price": "From $115.99",
+          "description": "Description of Wii.",
+          "image": "images/wii.jpg"
+        },
+        {
+          "name": "Nintendo 64 (N64)",
+          "price": "From $165.99",
+          "description": "Description of Nintendo 64 (N64).",
+          "image": "images/64.jpg"
+        },
+        {
+          "name": "Super Nintendo Entertainment System (SNES)",
+          "price": "From $335.99",
+          "description": "Description of Super Nintendo Entertainment System (SNES).",
+          "image": "images/snes.jpg"
+        },
+        {
+          "name": "Original Xbox",
+          "price": "From $99.99",
+          "description": "Description of Original Xbox.",
+          "image": "images/o.jpg"
+        }
+      ],
+      "computers": [
+        {
+          "name": "iMac G3",
+          "price": "From $199.99",
+          "description": "Description of iMac G3.",
+          "image": "images/imac2.jpg"
+        },
+        {
+          "name": "Acer TravelMate",
+          "price": "From $99.99",
+          "description": "Description of Acer TravelMate.",
+          "image": "images/p.jpg"
+        },
+        {
+          "name": "Dell OptiPlex",
+          "price": "From $99.99",
+          "description": "Description of Dell OptiPlex.",
+          "image": "images/dell.jpg"
+        },
+        {
+          "name": "HP OmniBook",
+          "price": "From $99.99",
+          "description": "Description of HP OmniBook.",
+          "image": "images/hp3.jpg"
+        },
+        {
+          "name": "iMac G4",
+          "price": "From $89.99",
+          "description": "Description of iMac G4.",
+          "image": "images/imac1.jpg"
+        },
+        {
+          "name": "Acer Aspire One",
+          "price": "From $99.99",
+          "description": "Description of Acer Aspire One.",
+          "image": "images/8.jpg"
+        }
+      ]
+    }
+  }
+  
