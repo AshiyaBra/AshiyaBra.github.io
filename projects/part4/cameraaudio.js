@@ -90,10 +90,10 @@ const getSaleInfo = (sale) => {
     name.innerHTML = `<strong>Name: ${sale.name}`;
     
     const oldPrice = document.createElement("p");
-    oldPrice.innerHTML = `<strong>Price: $${sale.oldPrice}`;
+    oldPrice.innerHTML = `<strong>New Price: $${sale.oldPrice}`;
 
     const newPrice = document.createElement("p");
-    newPrice.innerHTML = `<strong>Price: $${sale.newPrice}`;
+    newPrice.innerHTML = `<strong>Old Price: $${sale.newPrice}`;
 
     const description = document.createElement("p");
     description.innerHTML = `<strong>Description: </strong> ${sale.facts}`;

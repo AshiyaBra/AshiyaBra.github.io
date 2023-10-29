@@ -45,13 +45,17 @@ const getInfo = async () => {
 
 const displayInfo = async () => {
     const info = await getInfo();
-    const infoContainer = document.getElementById("cat-content"); 
+    const tabletsContainer = document.getElementById("tablets"); 
 
-    info.products.forEach((product) => {
-        infoContainer.appendChild(getProductInfo(product));
+    info.tablets.forEach((tablet) => {
+        infoContainer.appendChild(getProductInfo(tablet));
     });
 
-    
+    const phonesContainer = document.getElementById("phones"); 
+    info.phones.forEach((phone) => {
+        infoContainer.appendChild(getProductInfo(phone));
+    });
+
     const trendingProductsContainer = document.getElementById("trending-products");
     info.trendingProducts.forEach((trendingProduct) => {
         trendingProductsContainer.appendChild(getTrendingProductInfo(trendingProduct));
@@ -64,21 +68,45 @@ const displayInfo = async () => {
     });
 };
 
-const getProductInfo = (product) => {
+const getTabletInfo = (tablet) => {
    
     const section = document.createElement("section");
 
     const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: ${product.name}`;
+    name.innerHTML = `<strong>Name: ${tablet.name}`;
 
     const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: $${product.price}`;
+    price.innerHTML = `<strong>Price: $${tablet.price}`;
 
     const description = document.createElement("p");
-    description.innerHTML = `<strong>Description: </strong> ${product.description}`;
+    description.innerHTML = `<strong>Description: </strong> ${tablet.description}`;
 
     const img = document.createElement("img");
-    img.src = product.image;
+    img.src = tablet.image;
+
+    section.appendChild(name);
+    section.appendChild(price);
+    section.appendChild(description);
+    section.appendChild(img);
+
+    return section;
+};
+
+const getPhoneInfo = (phone) => {
+   
+    const section = document.createElement("section");
+
+    const name = document.createElement("h2");
+    name.innerHTML = `<strong>Name: ${phone.name}`;
+
+    const price = document.createElement("p");
+    price.innerHTML = `<strong>Price: $${phone.price}`;
+
+    const description = document.createElement("p");
+    description.innerHTML = `<strong>Description: </strong> ${phone.description}`;
+
+    const img = document.createElement("img");
+    img.src = phone.image;
 
     section.appendChild(name);
     section.appendChild(price);
@@ -121,10 +149,10 @@ const getSaleInfo = (sale) => {
     name.innerHTML = `<strong>Name: ${sale.name}`;
     
     const oldPrice = document.createElement("p");
-    oldPrice.innerHTML = `<strong>Price: $${sale.oldPrice}`;
+    oldPrice.innerHTML = `<strong>New Price: $${sale.oldPrice}`;
 
     const newPrice = document.createElement("p");
-    newPrice.innerHTML = `<strong>Price: $${sale.newPrice}`;
+    newPrice.innerHTML = `<strong>Old Price: $${sale.newPrice}`;
 
     const description = document.createElement("p");
     description.innerHTML = `<strong>Description: </strong> ${sale.facts}`;
