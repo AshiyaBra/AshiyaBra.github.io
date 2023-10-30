@@ -14,12 +14,11 @@ const getInfo = async () => {
 
 const displayInfo = async () => {
     const info = await getInfo();
-    const infoContainer = document.getElementById("products"); 
+    const infoContainer = document.getElementById("products");
 
-    
-    info["products"].forEach((product) => {
-        infoContainer.appendChild(getProductInfo(product));
-    });
+    if (info && info.products) {
+        infoContainer.appendChild(getProductInfo(info.products));
+    }
 };
 
 const getProductInfo = (product) => {
@@ -48,8 +47,6 @@ const getProductInfo = (product) => {
 
     return section;
 };
-
-
 
 window.onload = () => {
     document.getElementById("hamburger").addEventListener("click", toggleNav);
