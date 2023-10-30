@@ -3,7 +3,7 @@ const toggleNav = () => {
 };
 
 const getInfo = async () => {
-    const url = "https://ashiyabra.github.io/projects/part4/json/gamingsystems.json";
+    const url = "https://ashiyabra.github.io/projects/part4/json/product1.json";
     try {
         const response = await fetch(url);
         return await response.json();
@@ -29,16 +29,16 @@ const getProductInfo = (product) => {
     name.innerHTML = `<strong>Name: </strong> ${product.name}`;
 
     const authenticity = document.createElement("h2");
-    authenticity.innerHTML = `<strong>Name: </strong> ${product.authenticity}`;
+    authenticity.innerHTML = `<strong>Authenticity: </strong> ${product.authenticity}`;
     
     const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: </strong> $${product.price}`;
+    price.innerHTML = `<strong>Price: </strong> ${product.price}`;
 
     const description = document.createElement("p");
-    description.innerHTML = `<strong>Description: </strong> ${product.facts}`;
+    description.innerHTML = `<strong>Description: </strong> ${product.description}`;
 
     const img = document.createElement("img");
-    img.src = product.images[2];
+    img.src = product.images;
 
     section.appendChild(name);
     section.appendChild(authenticity);
@@ -48,6 +48,7 @@ const getProductInfo = (product) => {
 
     return section;
 };
+
 
 
 window.onload = () => {

@@ -29,13 +29,13 @@ const getProductInfo = (product) => {
     name.innerHTML = `<strong>Name: </strong> ${product.name}`;
 
     const authenticity = document.createElement("h2");
-    authenticity.innerHTML = `<strong>Name: </strong> ${product.authenticity}`;
+    authenticity.innerHTML = `<strong>Authenticity: </strong> ${product.authenticity}`;
     
     const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: </strong> $${product.price}`;
+    price.innerHTML = `<strong>Price: </strong> ${product.price}`;
 
     const description = document.createElement("p");
-    description.innerHTML = `<strong>Description: </strong> ${product.facts}`;
+    description.innerHTML = `<strong>Description: </strong> ${product.description}`;
 
     const img = document.createElement("img");
     img.src = product.images;
@@ -48,6 +48,7 @@ const getProductInfo = (product) => {
 
     return section;
 };
+
 
 
 window.onload = () => {
