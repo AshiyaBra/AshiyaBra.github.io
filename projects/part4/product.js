@@ -3,7 +3,7 @@ const toggleNav = () => {
 };
 
 const getInfo = async () => {
-    const url = "https://ashiyabra.github.io/projects/part4/json/gamingsystems.json";
+    const url = "https://ashiyabra.github.io/projects/part4/json/product.json";
     try {
         const response = await fetch(url);
         return await response.json();
@@ -38,7 +38,7 @@ const getProductInfo = (product) => {
     description.innerHTML = `<strong>Description: </strong> ${product.facts}`;
 
     const img = document.createElement("img");
-    img.src = product.images[2];
+    img.src = product.images;
 
     section.appendChild(name);
     section.appendChild(authenticity);
