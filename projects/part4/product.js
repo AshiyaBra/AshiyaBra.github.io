@@ -14,12 +14,11 @@ const getInfo = async () => {
 
 const displayInfo = async () => {
     const info = await getInfo();
-    const infoContainer = document.getElementById("products"); 
+    const infoContainer = document.getElementById("products");
 
-    
-    info["products"].forEach((product) => {
-        infoContainer.appendChild(getProductInfo(product));
-    });
+    if (info) {
+        infoContainer.appendChild(getProductInfo(info));
+    }
 };
 
 const getProductInfo = (product) => {
@@ -30,7 +29,7 @@ const getProductInfo = (product) => {
 
     const authenticity = document.createElement("h2");
     authenticity.innerHTML = `<strong>Authenticity: </strong> ${product.authenticity}`;
-    
+
     const price = document.createElement("p");
     price.innerHTML = `<strong>Price: </strong> ${product.price}`;
 
@@ -48,8 +47,6 @@ const getProductInfo = (product) => {
 
     return section;
 };
-
-
 
 window.onload = () => {
     document.getElementById("hamburger").addEventListener("click", toggleNav);

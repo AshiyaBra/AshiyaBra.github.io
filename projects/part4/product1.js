@@ -16,8 +16,8 @@ const displayInfo = async () => {
     const info = await getInfo();
     const infoContainer = document.getElementById("products");
 
-    if (info && info.products) {
-        infoContainer.appendChild(getProductInfo(info.products));
+    if (info) {
+        infoContainer.appendChild(getProductInfo(info));
     }
 };
 
@@ -29,7 +29,7 @@ const getProductInfo = (product) => {
 
     const authenticity = document.createElement("h2");
     authenticity.innerHTML = `<strong>Authenticity: </strong> ${product.authenticity}`;
-    
+
     const price = document.createElement("p");
     price.innerHTML = `<strong>Price: </strong> ${product.price}`;
 
