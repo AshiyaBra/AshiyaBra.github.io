@@ -3,7 +3,7 @@ const toggleNav = () => {
 };
 
 const getInfo = async () => {
-    const url = "https://ashiyabra.github.io/projects/part4/json/gamingsystems.json";
+    const url = "https://ashiyabra.github.io/projects/part4/json/computer.json";
     try {
         const response = await fetch(url);
         return await response.json();

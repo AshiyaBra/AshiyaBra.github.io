@@ -24,24 +24,16 @@ const displayInfo = async () => {
 
 const getProductInfo = (product) => {
     const section = document.createElement("section");
-
-    const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: </strong> ${product.name}`;
-
-    const authenticity = document.createElement("h2");
-    authenticity.innerHTML = `<strong>Name: </strong> ${product.authenticity}`;
     
     const price = document.createElement("p");
     price.innerHTML = `<strong>Price: </strong> $${product.price}`;
 
     const description = document.createElement("p");
-    description.innerHTML = `<strong>Description: </strong> ${product.facts}`;
+    description.innerHTML = `<strong>Description: </strong> ${product.description}`;
 
     const img = document.createElement("img");
-    img.src = product.images[2];
+    img.src = product.images;
 
-    section.appendChild(name);
-    section.appendChild(authenticity);
     section.appendChild(price);
     section.appendChild(description);
     section.appendChild(img);

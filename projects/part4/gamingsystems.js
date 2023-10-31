@@ -36,10 +36,10 @@ const getCategoryInfo = (category) => {
     const section = document.createElement("section");
 
     const title = document.createElement("h2");
-    title.innerHTML = ` ${category.title}`;
+    title.innerHTML = `${category.title}`;
 
     const img = document.createElement("img");
-    img.src = category.images[2];
+    img.src = category.images;
 
     section.appendChild(title);
     section.appendChild(img);
@@ -74,10 +74,10 @@ const getSaleInfo = (sale) => {
     const section = document.createElement("section");
 
     const title = document.createElement("h2");
-    title.innerHTML = `<strong>Name: </strong> ${sale.title}`;
+    title.innerHTML = ` ${sale.title}`;
     
     const price = document.createElement("p");
-    price.innerHTML = `<strong>New Price: </strong> ${sale.price}`;
+    price.innerHTML = `<strong> Price: </strong> ${sale.price}`;
 
     const description = document.createElement("p");
     description.innerHTML = `<strong>Description: </strong> ${sale.facts}`;
