@@ -1,6 +1,7 @@
 {
       "tablets": [
         {
+          "name": "Ipad",
           "description": "Ipad",
           "image": "images/ipad.jpg"
         },
