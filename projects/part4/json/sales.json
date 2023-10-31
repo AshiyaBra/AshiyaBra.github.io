@@ -1,5 +1,4 @@
 {
-    "sales": {
       "tablets": [
         {
           "description": "Ipad",
@@ -134,5 +133,5 @@
         }
       ]
     }
-  }
+
   

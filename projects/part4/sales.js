@@ -14,26 +14,40 @@ const getInfo = async () => {
 
 const displayInfo = async () => {
     const info = await getInfo();
-    const infoContainer = document.getElementById("cat-content"); 
 
-    const categoryContainer = document.getElementById(category);
-    info.sales[category].forEach((product) => {
-        categoryContainer.appendChild(getProductInfo(product));
+    const tabletContainer = document.getElementById("tablets");
+    info.tablets.forEach((tablet) => {
+        tabletContainer.appendChild(getTabletsInfo(tablet));
     });
 
-    const trendingProductsContainer = document.getElementById("trending-products");
-    info.trendingProducts.forEach((trendingProduct) => {
-        trendingProductsContainer.appendChild(getTrendingProductInfo(trendingProduct));
+    const phoneContainer = document.getElementById("phones");
+    info.phones.forEach((phone) => {
+        phoneContainer.appendChild(getPhonesInfo(phone));
+    });
+
+    const cameraContainer = document.getElementById("camera");
+    info.cameras.forEach((camera) => {
+        cameraContainer.appendChild(getCameraInfo(camera));
+    });
+
+    const audioContainer = document.getElementById("audio");
+    info.audios.forEach((audio) => {
+        audioContainer.appendChild(getAudioInfo(audio));
+    });
+
+    const gamingSystemsContainer = document.getElementById("gamingsystems");
+    info.gamingSystems.forEach((gamingSystem) => {
+        gamingSystemsContainer.appendChild(getGamingSystemsInfo(gamingSystem));
     });
 
     
-    const salesContainer = document.getElementById("sales");
-    info.sales.forEach((sale) => {
-        salesContainer.appendChild(getSaleInfo(sale));
+    const computersContainer = document.getElementById("computers");
+    info.computers.forEach((computer) => {
+        computersContainer.appendChild(getSaleInfo(computer));
     });
 };
 
-const getTabletsInfo = (product) => {
+const getTabletsInfo = (tablet) => {
     const section = document.createElement("section");
 
     const price = document.createElement("p");
@@ -53,7 +67,7 @@ const getTabletsInfo = (product) => {
     return section;
 };
 
-const getPhonesInfo = (product) => {
+const getPhonesInfo = (phone) => {
     const section = document.createElement("section");
 
     const price = document.createElement("p");
@@ -73,7 +87,7 @@ const getPhonesInfo = (product) => {
     return section;
 };
 
-const getCameraInfo = (product) => {
+const getCameraInfo = (camera) => {
     const section = document.createElement("section");
 
     const price = document.createElement("p");
@@ -93,7 +107,7 @@ const getCameraInfo = (product) => {
     return section;
 };
 
-const getAudioInfo = (product) => {
+const getAudioInfo = (audio) => {
     const section = document.createElement("section");
 
     const price = document.createElement("p");
@@ -113,7 +127,7 @@ const getAudioInfo = (product) => {
     return section;
 };
 
-const getGamingSystemsInfo = (sale) => {
+const getGamingSystemsInfo = (gamingSystem) => {
     const section = document.createElement("section");
 
     const name = document.createElement("h2");
@@ -136,7 +150,7 @@ const getGamingSystemsInfo = (sale) => {
     return section;
 };
 
-const getComputersInfo = (sale) => {
+const getComputersInfo = (computer) => {
     const section = document.createElement("section");
 
     const name = document.createElement("h2");
