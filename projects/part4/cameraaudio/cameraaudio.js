@@ -36,6 +36,15 @@ const displayInfo = async () => {
 
 const getProductInfo = (product) => {
     const section = document.createElement("section");
+    section.classList.add("column");
+
+    const a = document.createElement("a");
+    a.href = product.link;
+
+    const img = document.createElement("img");
+    img.classList.add("images");
+    img.src = product.image;
+    a.appendChild(img);
 
     const name = document.createElement("h2");
     name.innerHTML = `<strong>Name: </strong> ${product.name}`;
@@ -44,10 +53,6 @@ const getProductInfo = (product) => {
     price.innerHTML = `<strong>Price: </strong> $${product.price}`;
 
     const description = document.createElement("p");
-    description.innerHTML = `<strong>Description: </strong> ${product.description}`;
-
-    const img = document.createElement("img");
-    img.src = product.image;
 
     section.appendChild(name);
     section.appendChild(price);
