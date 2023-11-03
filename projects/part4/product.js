@@ -34,7 +34,7 @@ const getProductInfo = (product) => {
     price.innerHTML = `<strong>Price: </strong> ${product.price}`;
 
     const description = document.createElement("p");
-    description.innerHTML = `<strong>Description: </strong> ${product.description}`;
+    description.innerHTML = `<strong>Description: </strong> ${product.facts}`;
 
     const img = document.createElement("img");
     img.src = product.images;

@@ -33,6 +33,10 @@ const previewBox = () =>{
     };
 };
 
+const getProductDataByImageSrc = (previewImageSrc) => {
+    return response.find((product) => product.previewImage === previewImageSrc);
+};
+
 const getInfo = async () => {
     const url = "https://ashiyabra.github.io/projects/part4/json/tabletsphones.json";
     try {

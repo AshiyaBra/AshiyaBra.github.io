@@ -5,7 +5,9 @@
       "name": "iPad",
       "image": "images/ipad.jpg",
       "price": 150.00,
-      "description": "The vintage iPad, released in 2010, was a pioneering device that marked the beginning of the tablet era, featuring a 9.7-inch display and running on iOS 3. With its iconic design and limited processing power by today's standards, it serves as a nostalgic reminder of the early days of Apple's tablet innovation."
+      "description": "The vintage iPad, released in 2010, was a pioneering device that marked the beginning of the tablet era, featuring a 9.7-inch display and running on iOS 3. With its iconic design and limited processing power by today's standards, it serves as a nostalgic reminder of the early days of Apple's tablet innovation.",
+      "previewImage": "images/ipad 2.jpg",  
+      "previewDescription": "The vintage iPad, released in 2010, was a pioneering device that marked the beginning of the tablet era, featuring a 9.7-inch display and running on iOS 3. With its iconic design and limited processing power by today's standards, it serves as a nostalgic reminder of the early days of Apple's tablet innovation."
     },
     {
       "category": "Tablets",
