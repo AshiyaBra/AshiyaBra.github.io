@@ -56,6 +56,11 @@ const displayInfo = async () => {
         infoContainer.appendChild(getProductInfo(product));
     });
 
+    const cameraContainer = document.getElementById("phones"); 
+    info.products.forEach((product) => {
+        cameraContainer.appendChild(getPhoneInfo(product));
+    });
+
 
     const trendingProductsContainer = document.getElementById("trending-products");
     info.trendingProducts.forEach((trendingProduct) => {
@@ -70,6 +75,29 @@ const displayInfo = async () => {
 };
 
 const getProductInfo = (product) => {
+    const section = document.createElement("section");
+
+    const name = document.createElement("h2");
+    name.innerHTML = `<strong>Name: </strong> ${product.name}`;
+
+    const price = document.createElement("p");
+    price.innerHTML = `<strong>Price: </strong> $${product.price}`;
+
+    const description = document.createElement("p");
+    description.innerHTML = `<strong>Description: </strong> ${product.description}`;
+
+    const img = document.createElement("img");
+    img.src = product.image;
+
+    section.appendChild(name);
+    section.appendChild(price);
+    section.appendChild(description);
+    section.appendChild(img);
+
+    return section;
+};
+
+const getPhoneInfo = (product) => {
     const section = document.createElement("section");
 
     const name = document.createElement("h2");
