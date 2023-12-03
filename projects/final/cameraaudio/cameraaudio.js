@@ -39,15 +39,6 @@ const displayInfo = async () => {
 
 const getCameraInfo = (camera) => {
     const section = document.createElement("section");
-    section.classList.add("column");
-
-    const a = document.createElement("a");
-    a.href = camera.link;
-
-    const img = document.createElement("img");
-    img.classList.add("images");
-    img.src = camera.image;
-    a.appendChild(img);
 
     const name = document.createElement("h2");
     name.innerHTML = `<strong>Name: </strong> ${camera.name}`;
@@ -56,6 +47,10 @@ const getCameraInfo = (camera) => {
     price.innerHTML = `<strong>Price: </strong> $${camera.price}`;
 
     const description = document.createElement("p");
+    description.innerHTML = `<strong>Description: </strong> ${camera.description}`;
+
+    const img = document.createElement("img");
+    img.src = camera.image;
 
     section.appendChild(name);
     section.appendChild(price);
@@ -67,15 +62,6 @@ const getCameraInfo = (camera) => {
 
 const getAudioInfo = (audio) => {
     const section = document.createElement("section");
-    section.classList.add("column");
-
-    const a = document.createElement("a");
-    a.href = audio.link;
-
-    const img = document.createElement("img");
-    img.classList.add("images");
-    img.src = audio.image;
-    a.appendChild(img);
 
     const name = document.createElement("h2");
     name.innerHTML = `<strong>Name: </strong> ${audio.name}`;
@@ -84,6 +70,10 @@ const getAudioInfo = (audio) => {
     price.innerHTML = `<strong>Price: </strong> $${audio.price}`;
 
     const description = document.createElement("p");
+    description.innerHTML = `<strong>Description: </strong> ${audio.description}`;
+
+    const img = document.createElement("img");
+    img.src = audio.image;
 
     section.appendChild(name);
     section.appendChild(price);
