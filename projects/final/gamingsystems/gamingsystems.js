@@ -35,7 +35,7 @@ const displayInfo = async () => {
 const getCategoryInfo = (category) => {
     const section = document.createElement("section");
 
-    const title = document.createElement("h2");
+    const title = document.createElement("h3");
     title.innerHTML = `${category.title}`;
 
     const img = document.createElement("img");

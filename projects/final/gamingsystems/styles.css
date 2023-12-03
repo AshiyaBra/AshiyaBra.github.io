@@ -83,7 +83,7 @@ body{
 h2{
   text-align: start;
   font-size: medium;
-    color:var(--white);
+  color:var(--white);
 }
 
 h4{
@@ -100,6 +100,18 @@ h1{
 }
 .bold{
   font-weight: 1000;
+}
+
+h3{
+  text-align: center;
+  font-size: medium;
+  color:var(--white);
+  background-color: var(--back);
+  border-radius: 10px;
+  padding: 6px;
+  width: 100px;
+  height: 15px;
+
 }
 /* Main Sales */
 .main-sales{
@@ -165,178 +177,28 @@ footer {
   background-color: var(--main); 
 }
 /* Gaming Systems and Computers */
-.columns section {
+.columns {
   
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color:var(--main);
-  text-align: center;
- 
-}
-
-.columns2 section {
- 
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: var(--main);
-  text-align: center;
-  
-}
-
-/* Tablets/Phones and Cameras/Audio */
-.main-cat, .main-cat1{
-  background-color: var(--back);
-  border-radius: 10px;
-  flex: 1; 
-  margin: 0 5px;
-}
-#main-cat {
-  text-align: center; 
-}
-#main-container {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.columns2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-#button-tabpho {
-  background-color: var(--main); 
-  color:var(--white); 
-  padding: 10px; 
-  border: none; 
-  border-radius: 10px; 
-  font-size: medium; 
-  width: 200px; 
-  height: 35px;
-}
-#button-tabpho:hover {
-  background-color: var(--back); 
-}
-
-/* Sales */
-#main-container1 {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.main-cat3{
-  align-items: center;
-}
-/*Product Pages*/
-.images1 {
-  max-width: 100%;
-  align-items: center;
-  border-radius: 10px;
-}
-
-#main-container2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 215px;
-}
-
-/* Input */
-.forms  {
   background-color: var(--back);
   border-radius: 10px;
-  width: 20%;
-  padding: 20px; 
-  text-align: center;
-  margin: 20px; 
+ 
 }
-
-.forms p {
-  margin: 10px 0; 
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  width: 100%;
-}
-
- input[type="text"],
- input[type="email"],
- textarea {
-  width: 100%; 
-  margin: 5px 0; 
-  padding: 5px;
-  border: 1px solid var(--white);
+section {
+  
+  flex: 5;
+  margin: 10px;
+  padding: 10px;
   border-radius: 5px;
+  background-color: var(--main);
+ 
 }
 
-/* Preview */
-#preview-back{
-  display: none; 
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: hsla(221, 88%, 67%, 0.356);
-}
-.content {
-  background-color: white;
-  margin: auto;
-  width: fit-content;
-  border-radius: 10px;
-}
-
-.content img {
-  max-width: fit-content;
-  display: block;
-  border-radius: 10px;
-  padding: 30px;
-  margin: auto;
-}
-
-.content p{
-  max-width:fit-content;
-  font-size: large;
-}
-.close {
-  color: black;
-  float: right;
-  font-size:30px;
-  padding: 0px 5px;
-  cursor: pointer;
-}
-
-/* Slideshow */
-#slideshow {
-  text-align: center; 
-}
-
-#slideshow .slide {
-  max-width: 100%;
-  align-items: center;
-}
-#content-container {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-}
-.colored-background {
-    background-color: var(--back);
-    padding: 20px;
-    width: 20%;
-    margin: 10% auto; 
-    border-radius: 10px;
-}
+#categories{
+  margin-top: 20px;
+ }
 
 /*Larger Resolutions*/
 @media(min-width: 900px) {

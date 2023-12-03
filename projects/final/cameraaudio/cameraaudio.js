@@ -21,7 +21,7 @@ const displayInfo = async () => {
     });
 
     const audioContainer = document.getElementById("audio");
-    info.audios.forEach((audio) => {
+    info.audios.forEach((audio)=>{
         audioContainer.appendChild(getAudioInfo(audio));
     });
 
