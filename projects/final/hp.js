@@ -3,7 +3,7 @@ const toggleNav = () => {
 };
 
 const getInfo = async () => {
-    const url = "https://ashiyabra.github.io/projects/part4/json/hp.json";
+    const url = "https://ashiyabra.github.io/projects/final/json/hp.json";
     try {
         const response = await fetch(url);
         return await response.json();
@@ -14,31 +14,97 @@ const getInfo = async () => {
 
 const displayInfo = async () => {
     const info = await getInfo();
-    const infoContainer = document.getElementById("products");
+    const infoContainer = document.getElementById("seventy"); 
 
-    for (const decade in info["products"]) {
-        const productsInDecade = info["products"][decade];
-        const decadeTitle = document.createElement("h2");
-        decadeTitle.textContent = decade;
-        infoContainer.appendChild(decadeTitle);
+    info.seventys.forEach((seventy) => {
+        infoContainer.appendChild(getSeventyInfo(seventy));
+    });
 
-        productsInDecade.forEach((product) => {
-            infoContainer.appendChild(getProductInfo(product));
-        });
-    }
+    const eightysContainer = document.getElementById("eighty");
+    info.eightys.forEach((eighty)=>{
+        eightysContainer.appendChild(getEightyInfo(eighty));
+    });
+
+    const ninetysContainer = document.getElementById("ninety");
+    info.ninetys.forEach((ninety) => {
+        ninetysContainer.appendChild(getNinetyInfo(ninety));
+    });
+
+    
+    const twoThousandsContainer = document.getElementById("two-thousands");
+    info.twoThousands.forEach((twoThousand) => {
+        twoThousandsContainer.appendChild(gettwoThousandsInfo(twoThousand));
+    });
 };
 
-const getProductInfo = (product) => {
+const getSeventyInfo = (seventy) => {
     const section = document.createElement("section");
 
     const title = document.createElement("h3"); 
-    title.textContent = product.title;
+    title.textContent = seventy.title;
 
     const facts = document.createElement("p");
-    facts.innerHTML = `<strong>Facts: </strong> ${product.facts}`;
+    facts.innerHTML = `<strong>Facts: </strong> ${seventy.facts}`;
 
     const img = document.createElement("img");
-    img.src = product.image;
+    img.src = seventy.image;
+
+    section.appendChild(title);
+    section.appendChild(facts);
+    section.appendChild(img);
+
+    return section;
+};
+
+const getEightyInfo = (eighty) => {
+    const section = document.createElement("section");
+
+    const title = document.createElement("h3"); 
+    title.textContent = eighty.title;
+
+    const facts = document.createElement("p");
+    facts.innerHTML = `<strong>Facts: </strong> ${eighty.facts}`;
+
+    const img = document.createElement("img");
+    img.src = eighty.image;
+
+    section.appendChild(title);
+    section.appendChild(facts);
+    section.appendChild(img);
+
+    return section;
+};
+
+const getNinetyInfo = (ninety) => {
+    const section = document.createElement("section");
+
+    const title = document.createElement("h3"); 
+    title.textContent = ninety.title;
+
+    const facts = document.createElement("p");
+    facts.innerHTML = `<strong>Facts: </strong> ${ninety.facts}`;
+
+    const img = document.createElement("img");
+    img.src = ninety.image;
+
+    section.appendChild(title);
+    section.appendChild(facts);
+    section.appendChild(img);
+
+    return section;
+};
+
+const gettwoThousandsInfo = (twoThousand) => {
+    const section = document.createElement("section");
+
+    const title = document.createElement("h3"); 
+    title.textContent = twoThousand.title;
+
+    const facts = document.createElement("p");
+    facts.innerHTML = `<strong>Facts: </strong> ${twoThousand.facts}`;
+
+    const img = document.createElement("img");
+    img.src = twoThousand.image;
 
     section.appendChild(title);
     section.appendChild(facts);

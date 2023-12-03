@@ -1,5 +1,5 @@
 {
-    "1970s": [
+    "seventys": [
         {
             "title": "HP Pavilion Series",
             "facts": "HP's vintage computers, like the HP Pavilion series, are iconic for their sleek, all-in-one designs. These machines were favored for their performance and were often found in homes and offices during the early 2000s.",
@@ -31,7 +31,7 @@
             "image": "images/dell.jpg"
         }
     ],
-    "1980s": [
+    "eightys": [
         {
             "title": "HP 9100A Calculator",
             "facts": "The HP 9100A, released in 1968, was one of the first desktop calculators with scientific and engineering capabilities, marking a significant advancement in computation tools.",
@@ -63,7 +63,7 @@
             "image": "images/g.jpg"
         }
     ],
-    "1990s": [
+    "ninetys": [
         {
             "title": "HP LaserJet Printers",
             "facts": "Vintage HP printers, like the HP LaserJet series from the 1980s, set a standard for high-quality laser printing and became synonymous with office productivity.",
@@ -95,7 +95,7 @@
             "image": "images/23.jpg"
         }
     ],
-    "2000s": [
+    "twoThousands": [
         {
             "title": "HP 48 Series Graphing Calculators",
             "facts": "The HP 48 series graphing calculators, introduced in the 1990s, were popular among engineers and students for their advanced graphing and programming features.",
