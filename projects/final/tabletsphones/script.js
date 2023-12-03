@@ -52,13 +52,13 @@ const displayInfo = async () => {
     const infoContainer = document.getElementById("cat-content"); 
 
     
-    info.products.forEach((tablets) => {
-        infoContainer.appendChild(getProductInfo(tablets));
+    info.tablets.forEach((tablet) => {
+        infoContainer.appendChild(getTabletInfo(tablet));
     });
 
-    const cameraContainer = document.getElementById("phones"); 
-    info.products.forEach((phones) => {
-        cameraContainer.appendChild(getPhoneInfo(phones));
+    const phoneContainer = document.getElementById("phones"); 
+    info.phones.forEach((phone) => {
+        phoneContainer.appendChild(getPhoneInfo(phone));
     });
 
 
@@ -74,20 +74,20 @@ const displayInfo = async () => {
     });
 };
 
-const getProductInfo = (phones) => {
+const getTabletInfo = (tablet) => {
     const section = document.createElement("section");
 
     const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: </strong> ${phones.name}`;
+    name.innerHTML = `<strong>Name: </strong> ${tablet.name}`;
 
     const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: </strong> $${phones.price}`;
+    price.innerHTML = `<strong>Price: </strong> $${tablet.price}`;
 
     const description = document.createElement("p");
-    description.innerHTML = `<strong>Description: </strong> ${phones.description}`;
+    description.innerHTML = `<strong>Description: </strong> ${tablet.description}`;
 
     const img = document.createElement("img");
-    img.src = phones.image;
+    img.src = tablet.image;
 
     section.appendChild(name);
     section.appendChild(price);
@@ -97,20 +97,20 @@ const getProductInfo = (phones) => {
     return section;
 };
 
-const getPhoneInfo = (tablets) => {
+const getPhoneInfo = (phone) => {
     const section = document.createElement("section");
 
     const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: </strong> ${tablets.name}`;
+    name.innerHTML = `<strong>Name: </strong> ${phone.name}`;
 
     const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: </strong> $${tablets.price}`;
+    price.innerHTML = `<strong>Price: </strong> $${phone.price}`;
 
     const description = document.createElement("p");
-    description.innerHTML = `<strong>Description: </strong> ${tablets.description}`;
+    description.innerHTML = `<strong>Description: </strong> ${phone.description}`;
 
     const img = document.createElement("img");
-    img.src = tablets.image;
+    img.src = phone.image;
 
     section.appendChild(name);
     section.appendChild(price);

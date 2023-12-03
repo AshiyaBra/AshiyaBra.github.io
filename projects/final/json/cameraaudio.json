@@ -1,5 +1,5 @@
 {
-    "products": [
+    "cameras": [
       {
         "category": "Camera",
         "name": "Canon AE-1",
@@ -13,7 +13,9 @@
         "image": "images/kodak.jpg",
         "price": 35.00,
         "description": "The vintage Kodak camera, with its classic design and mechanical simplicity, evokes a sense of nostalgia and a bygone era of photography. These iconic cameras captured timeless moments on film, becoming cherished artifacts in the history of photography."
-      },
+      }
+    ],
+    "audio": [
       {
         "category": "Audio",
         "name": "Retro Radios",

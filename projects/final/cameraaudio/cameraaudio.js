@@ -3,7 +3,7 @@ const toggleNav = () => {
 };
 
 const getInfo = async () => {
-    const url = "https://ashiyabra.github.io/projects/part4/json/cameraaudio.json";
+    const url = "https://ashiyabra.github.io/projects/final/json/cameraaudio.json";
     try {
         const response = await fetch(url);
         return await response.json();
@@ -16,11 +16,14 @@ const displayInfo = async () => {
     const info = await getInfo();
     const infoContainer = document.getElementById("cat-content"); 
 
-    info.products.forEach((product) => {
-        infoContainer.appendChild(getProductInfo(product));
+    info.cameras.forEach((camera) => {
+        infoContainer.appendChild(getCameraInfo(camera));
     });
 
-
+    const audioContainer = document.getElementById("audio");
+    info.audios.forEach((audio) => {
+        audioContainer.appendChild(getAudioInfo(audio));
+    });
 
     const trendingProductsContainer = document.getElementById("trending-products");
     info.trendingProducts.forEach((trendingProduct) => {
@@ -34,23 +37,23 @@ const displayInfo = async () => {
     });
 };
 
-const getProductInfo = (product) => {
+const getCameraInfo = (camera) => {
     const section = document.createElement("section");
     section.classList.add("column");
 
     const a = document.createElement("a");
-    a.href = product.link;
+    a.href = camera.link;
 
     const img = document.createElement("img");
     img.classList.add("images");
-    img.src = product.image;
+    img.src = camera.image;
     a.appendChild(img);
 
     const name = document.createElement("h2");
-    name.innerHTML = `<strong>Name: </strong> ${product.name}`;
+    name.innerHTML = `<strong>Name: </strong> ${camera.name}`;
 
     const price = document.createElement("p");
-    price.innerHTML = `<strong>Price: </strong> $${product.price}`;
+    price.innerHTML = `<strong>Price: </strong> $${camera.price}`;
 
     const description = document.createElement("p");
 
@@ -62,6 +65,33 @@ const getProductInfo = (product) => {
     return section;
 };
 
+const getAudioInfo = (audio) => {
+    const section = document.createElement("section");
+    section.classList.add("column");
+
+    const a = document.createElement("a");
+    a.href = audio.link;
+
+    const img = document.createElement("img");
+    img.classList.add("images");
+    img.src = audio.image;
+    a.appendChild(img);
+
+    const name = document.createElement("h2");
+    name.innerHTML = `<strong>Name: </strong> ${audio.name}`;
+
+    const price = document.createElement("p");
+    price.innerHTML = `<strong>Price: </strong> $${audio.price}`;
+
+    const description = document.createElement("p");
+
+    section.appendChild(name);
+    section.appendChild(price);
+    section.appendChild(description);
+    section.appendChild(img);
+
+    return section;
+};
 
 const getTrendingProductInfo = (trendingProduct) => {
     const section = document.createElement("section");
