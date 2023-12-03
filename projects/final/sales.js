@@ -43,7 +43,7 @@ const displayInfo = async () => {
     
     const computersContainer = document.getElementById("computers");
     info.computers.forEach((computer) => {
-        computersContainer.appendChild(getSaleInfo(computer));
+        computersContainer.appendChild(getComputersInfo(computer));
     });
 };
 
