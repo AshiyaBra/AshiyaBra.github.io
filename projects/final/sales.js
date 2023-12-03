@@ -3,7 +3,7 @@ const toggleNav = () => {
 };
 
 const getInfo = async () => {
-    const url = "https://ashiyabra.github.io/projects/part4/json/sales.json";
+    const url = "https://ashiyabra.github.io/projects/final/json/sales.json";
     try {
         const response = await fetch(url);
         return await response.json();
@@ -35,7 +35,7 @@ const displayInfo = async () => {
         audioContainer.appendChild(getAudioInfo(audio));
     });
 
-    const gamingSystemsContainer = document.getElementById("gamingsystems");
+    const gamingSystemsContainer = document.getElementById("gamingSystems");
     info.gamingSystems.forEach((gamingSystem) => {
         gamingSystemsContainer.appendChild(getGamingSystemsInfo(gamingSystem));
     });

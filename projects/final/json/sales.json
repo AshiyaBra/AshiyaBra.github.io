@@ -29,7 +29,7 @@
           "image": "images/ph8.jpg"
         }
       ],
-      "camera": [
+      "cameras": [
         {
           "description": "Kodak.",
           "image": "images/kodak.jpg"
@@ -43,7 +43,7 @@
           "image": "images/cam4.jpg"
         }
       ],
-      "audio": [
+      "audios": [
         {
           "description": "Headphones",
           "image": "images/sony.jpg"
