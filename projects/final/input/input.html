@@ -10,7 +10,7 @@
 
      <header id="main-header">
         <div class="header-content">
-            <a href="https://ashiyabra.github.io/projects/final/index.html"><img src="images/tttlogo.png"></a>
+            <a href="https://ashiyabra.github.io/projects/final/index/index.html"><img src="images/tttlogo.png"></a>
         </div>
         <nav> 
             <select id="menuDropdown">
@@ -32,13 +32,13 @@
                 <div></div>
             </div>
             <ul id="nav-pages">
-                <li><a href="https://ashiyabra.github.io/projects/final/index.html">Home</a></li>
-                <li><a href="https://ashiyabra.github.io/projects/final/tabletsphones.html">Tablets/Phones</a></li>
-                <li><a href="https://ashiyabra.github.io/projects/final/cameraaudio.html">Camera/Audio</a></li>
-                <li><a href="https://ashiyabra.github.io/projects/final/gamingsystems.html">Gaming Systems</a></li>
-                <li><a href="https://ashiyabra.github.io/projects/final/computers.html">Computers</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/final/index/index.html">Home</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/final/tabletsphones/tabletsphones.html">Tablets/Phones</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/final/cameraaudio/cameraaudio.html">Camera/Audio</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/final/gamingsystems/gamingsystems.html">Gaming Systems</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/final/computers/computers.html">Computers</a></li>
                 <li><a href="#">Add Device</a></li>
-                <li><a href="https://ashiyabra.github.io/projects/final/contactus.html">Contact us</a></li>
+                <li><a href="https://ashiyabra.github.io/projects/final/contactus/contactus.html">Contact us</a></li>
             </ul>
         </nav>
         <div class="header-right">
@@ -48,28 +48,35 @@
 
     <main>
         <div class="main-title">
-            <h1>Add a Device</h1>
+            <h1>Devices</h1>
+            <h2>Add Device</h2>
+            <a href="#" id="add-link">+</a>
         </div>
     </main>
    
+    <div class="columns two-columns">
+        <div id="devices-list" class="columns"></div>
+        <div id="devices-details-column">
+            <div id="devices-details"></div>
+        </div>
+    </div>
 
-    <main class="main">
-
-        <div class="forms">
-
-        <section id="forms-section">
-
-            <form id="form">
-                Name:
+        <div id="add-edit-device-container" class="dialog transparent">
+            <span class="close">&times;</span>
+            
+            <h3 id="title">Add Device</h3>
+            <form id="add-edit-device-form" method="post">
+                <input type="hidden" name="_id" value="-1">
                 <p> 
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Device Name: </label>
+                    <input type="text" id="name" name="name" required/>
                 </p>
-                Release Date:
                 <p>
-                    <input type="date" id="date" required>
+                    <label for="date">Release Date: </label>
+                    <input type="date" id="date" name="date" required>
                 </p>
-                Authenticity:
                 <p>
+                    <label for="authenticity">Authenticity: </label>
                     <input type="number" size="6" id="authenticity" min="1" max="100" value="0" required>
                 </p>
                  Condition: 
@@ -85,13 +92,13 @@
                     <input type="radio" name="condition" value="poor" />
                     <label for="poor" id="poor">Poor</label>
                 </p>
-                Description:
                 <p>
+                    <label for="description">Description: </label>
                     <textarea type="text" id="description" name="description"></textarea>
                 </p>
                 <p>
-                    <!-- Got form chapght-->
-                    <input type="file" id="fileInput" accept=".jpg, .jpeg, .png, .pdf" required >
+                    <label for="img">Upload Image: </label>
+                    <input type="file" id="img" accept=".jpg, .jpeg, .png, .pdf" required >
                 </p>
                 <p>
                     <button id="add" type="submit">Add Device</button>
@@ -102,8 +109,6 @@
                 <p>Your device has been added!</p>
             </section>
         </div>
-        </section>
-    </main>
 
     </body>
 </html>
