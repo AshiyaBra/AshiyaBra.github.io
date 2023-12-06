@@ -39,10 +39,16 @@ const getCategoryInfo = (category) => {
     title.innerHTML = `${category.title}`;
 
     const img = document.createElement("img");
-    img.src = category.images;
+    img.src = `https://ashiyabra.github.io/projects/final/${category.images}`;
 
+    const link = document.createElement("a");
+    link.href = category.link;
+    
+
+
+    link.appendChild(img);
     section.appendChild(title);
-    section.appendChild(img);
+    section.appendChild(link);
 
     return section;
 };
@@ -60,12 +66,16 @@ const getTrendingProductInfo = (trendingProduct) => {
     description.innerHTML = `<strong>Description: </strong> ${trendingProduct.facts}`;
 
     const img = document.createElement("img");
-    img.src = trendingProduct.image;
+    img.src = `https://ashiyabra.github.io/projects/final/${trendingProduct.image}`;
 
+    const link = document.createElement("a");
+    link.href = trendingProduct.link;
+
+    link.appendChild(img);
     section.appendChild(title);
     section.appendChild(price);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
 
     return section;
 };
@@ -83,12 +93,18 @@ const getSaleInfo = (sale) => {
     description.innerHTML = `<strong>Description: </strong> ${sale.facts}`;
 
     const img = document.createElement("img");
-    img.src = sale.image;
+    img.src = `https://ashiyabra.github.io/projects/final/${sale.image}`;
 
+    const link = document.createElement("a");
+    link.href = sale.link;
+    
+
+
+    link.appendChild(img);
     section.appendChild(title);
     section.appendChild(price);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
     
     return section;
 };

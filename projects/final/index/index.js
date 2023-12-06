@@ -3,7 +3,7 @@ const toggleNav = () => {
 };
 
 const getInfo = async () => {
-    const url = "https://ashiyabra.github.io/projects/part4/json/index.json";
+    const url = "https://ashiyabra.github.io/projects/final/json/index.json";
     try {
         const response = await fetch(url);
         return await response.json();
@@ -31,11 +31,17 @@ const getSectionInfo = (info) => {
     description.innerHTML = `<strong>Description: </strong> ${info.description}`;
 
     const img = document.createElement("img");
-    img.src = `https://ashiyabra.github.io/projects/part4/${info.image}`; 
+    img.src = `https://ashiyabra.github.io/projects/final/${info.image}`;
 
+    const link = document.createElement("a");
+    link.href = info.link;
+    
+
+
+    link.appendChild(img);
     section.appendChild(h2);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link); 
 
     return section;
 };

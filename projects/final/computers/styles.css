@@ -113,6 +113,10 @@ h3{
   height: 15px;
 
 }
+
+a{
+  text-decoration: none;
+}
 /* Main Sales */
 .main-sales{
   background-color: var(--back);

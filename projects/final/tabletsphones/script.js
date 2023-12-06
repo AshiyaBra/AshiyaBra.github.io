@@ -88,6 +88,11 @@ const getTabletInfo = (tablet) => {
 
     const img = document.createElement("img");
     img.src = tablet.image;
+    
+    img.setAttribute("data-large-src", tablet.previewImage);
+    img.setAttribute("data-preview-description", tablet.previewDescription);
+
+    img.classList.add("preview-trigger");
 
     section.appendChild(name);
     section.appendChild(price);
@@ -110,12 +115,16 @@ const getPhoneInfo = (phone) => {
     description.innerHTML = `<strong>Description: </strong> ${phone.description}`;
 
     const img = document.createElement("img");
-    img.src = phone.image;
+    img.src = `https://ashiyabra.github.io/projects/final/${phone.image}`;
 
+    const link = document.createElement("a");
+    link.href = phone.link;
+
+    link.appendChild(img);
     section.appendChild(name);
     section.appendChild(price);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
 
     return section;
 };
@@ -134,12 +143,16 @@ const getTrendingProductInfo = (trendingProduct) => {
     description.innerHTML = `<strong>Description: </strong> ${trendingProduct.facts}`;
 
     const img = document.createElement("img");
-    img.src = trendingProduct.image;
+    img.src = `https://ashiyabra.github.io/projects/final/${trendingProduct.image}`;
 
+    const link = document.createElement("a");
+    link.href = trendingProduct.link;
+    
+    link.appendChild(img);
     section.appendChild(name);
     section.appendChild(price);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
 
     return section;
 };
@@ -160,13 +173,19 @@ const getSaleInfo = (sale) => {
     description.innerHTML = `<strong>Description: </strong> ${sale.facts}`;
 
     const img = document.createElement("img");
-    img.src = sale.image;
+    img.src = `https://ashiyabra.github.io/projects/final/${sale.image}`;
 
+    const link = document.createElement("a");
+    link.href = sale.link;
+    
+
+
+    link.appendChild(img);
     section.appendChild(name);
     section.appendChild(oldPrice);
     section.appendChild(newPrice);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
     
     return section;
 };

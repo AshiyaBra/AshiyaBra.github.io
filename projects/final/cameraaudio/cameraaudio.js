@@ -50,12 +50,16 @@ const getCameraInfo = (camera) => {
     description.innerHTML = `<strong>Description: </strong> ${camera.description}`;
 
     const img = document.createElement("img");
-    img.src = camera.image;
+    img.src = `https://ashiyabra.github.io/projects/final/${camera.image}`;
 
+    const link = document.createElement("a");
+    link.href = camera.link;
+    
+    link.appendChild(img);
     section.appendChild(name);
     section.appendChild(price);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
 
     return section;
 };
@@ -73,12 +77,16 @@ const getAudioInfo = (audio) => {
     description.innerHTML = `<strong>Description: </strong> ${audio.description}`;
 
     const img = document.createElement("img");
-    img.src = audio.image;
+    img.src = `https://ashiyabra.github.io/projects/final/${audio.image}`;
 
+    const link = document.createElement("a");
+    link.href = audio.link;
+    
+    link.appendChild(img);
     section.appendChild(name);
     section.appendChild(price);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
 
     return section;
 };
@@ -96,12 +104,16 @@ const getTrendingProductInfo = (trendingProduct) => {
     description.innerHTML = `<strong>Description: </strong> ${trendingProduct.facts}`;
 
     const img = document.createElement("img");
-    img.src = trendingProduct.image;
+    img.src = `https://ashiyabra.github.io/projects/final/${trendingProduct.image}`;
 
+    const link = document.createElement("a");
+    link.href = trendingProduct.link;
+    
+    link.appendChild(img);
     section.appendChild(name);
     section.appendChild(price);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
 
     return section;
 };
@@ -122,13 +134,17 @@ const getSaleInfo = (sale) => {
     description.innerHTML = `<strong>Description: </strong> ${sale.facts}`;
 
     const img = document.createElement("img");
-    img.src = sale.image;
+    img.src = `https://ashiyabra.github.io/projects/final/${sale.image}`;
 
+    const link = document.createElement("a");
+    link.href = sale.link;
+
+    link.appendChild(img);
     section.appendChild(name);
     section.appendChild(oldPrice);
     section.appendChild(newPrice);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
     
     return section;
 };
