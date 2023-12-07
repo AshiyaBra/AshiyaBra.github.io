@@ -103,7 +103,13 @@ a{
   color:var(--text);
   text-decoration: none;
 }
+.hidden {
+  display: none;
+}
 
+.transparent {
+  opacity: 0;
+}
 
 /* Main Title */
 main .main-title{
@@ -142,7 +148,7 @@ footer {
 }
 
 /* Input */
-section, #devices-details-column, #add-edit-device-container {
+section, #devices-details-column, #add-edit-device-containe {
   padding: 10px;
   margin: 5px;
   background: var(--back);
@@ -153,21 +159,21 @@ section, #devices-details-column, #add-edit-device-container {
 #add-link {
   font-size:large;
   text-decoration: none;
-  background-color: var(--section);
+  background-color: var(--back);
   border-radius: 10px;
-  border: 4px solid var(--text);
-  color:var(--text);
+  border: 4px solid var(--white);
+  color:var(--white);
 }
 
 #edit-link {
   float: right;
   margin-right: 10px;
-  color:#9B3CA5;
+  color:var(--hover);
 }
 
 #delete-link {
   float: center;
-  color:#9B3CA5;
+  color:var(--hover);
 }
 
 /*Dialog/Close Button*/

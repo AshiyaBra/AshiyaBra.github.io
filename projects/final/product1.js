@@ -37,13 +37,17 @@ const getProductInfo = (product) => {
     description.innerHTML = `<strong>Description: </strong> ${product.description}`;
 
     const img = document.createElement("img");
-    img.src = product.images;
+    img.src = `https://ashiyabra.github.io/projects/final/${product.images}`;
 
+    const link = document.createElement("a");
+    link.href = product.link;
+    
+    link.appendChild(img);
     section.appendChild(name);
     section.appendChild(authenticity);
     section.appendChild(price);
     section.appendChild(description);
-    section.appendChild(img);
+    section.appendChild(link);
 
     return section;
 };

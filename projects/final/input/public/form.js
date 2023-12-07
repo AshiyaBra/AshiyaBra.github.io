@@ -27,6 +27,8 @@ const showDevices = async() => {
         img.src = device.img;
         section.append(img);
 
+        
+
         a.onclick = (e) => {
             e.preventDefault();
             displayDetails(device);
@@ -89,12 +91,13 @@ const deleteDevice = async (device) => {
         "Content-Type": "application/json;charset=utf-8",
         },
   });
+ 
 
     if (response.status != 200) {
         console.log("error deleting");
         return;
     }
-
+    
     let result = await response.json();
     showDevices();
     document.getElementById("devices-details").innerHTML = "";
@@ -108,7 +111,7 @@ const populateEditForm = (device) => {
     form.date.value = device.date;
     form.querySelector('input[name="condition"]:checked').value = device.condition;
     form.description.value = device.description;
-    
+ 
 };
 
 const addEditDevice = async(e) => {
@@ -116,7 +119,7 @@ const addEditDevice = async(e) => {
     const form =  document.getElementById("add-edit-device-form");
     const formData = new FormData(form);
    
-    let response;
+    let device;
     if(form._id.value == -1){
         formData.delete("_id");
         
@@ -126,7 +129,7 @@ const addEditDevice = async(e) => {
             method: "POST",
             body: formData,
         });
-
+        
 
     }
 
@@ -149,6 +152,8 @@ const addEditDevice = async(e) => {
     if (form._id.value != -1) {
         displayDetails(device);
     }
+
+    
     
     resetForm();
     document.querySelector(".dialog").classList.add("transparent");
@@ -160,7 +165,6 @@ const resetForm = () => {
     const form = document.getElementById("add-edit-device-form");
     form.reset();
     form._id.value = "-1";
-    
     
 };
 

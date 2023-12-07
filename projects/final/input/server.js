@@ -41,30 +41,32 @@ const getDevices = async (res) => {
 }
 
 app.post("/api/devices", upload.single("img"), (req, res) => {
+    console.log("Received POST request to /api/devices");
     const result = validateDevice(req.body);
 
     if (result.error) {
+        console.log("Validation error:", result.error.details[0].message);
         res.status(400).send(result.error.details[0].message);
         return;
-      }
+    }
+
+    console.log("Validated input:", req.body);
 
     const newDevice = new Device({
-        
         name: req.body.name,
         date: req.body.date,
         authenticity: req.body.authenticity,
         condition: req.body.condition,
         description: req.body.description,
-       
-        
     });
 
-    if(req.file){
+    if (req.file) {
         newDevice.img = "images/" + req.file.filename;
     }
 
     createDevice(newDevice, res);
 });
+
 
 const createDevice = async (newDevice, res) => {
     const result = await newDevice.save();
@@ -72,7 +74,7 @@ const createDevice = async (newDevice, res) => {
 }
 
 app.put("/api/devices/:id" , upload.single("img"), (req, res) => {
-    
+    console.log(`Received PUT request to /api/devices/${req.params.id}`);
     const result = validateDevice(req.body);
 
     if (result.error) {
@@ -103,6 +105,7 @@ const updateDevice = async (req, res) => {
 };
 
 app.delete("/api/devices/:id", upload.single("img"), (req, res) => {
+    console.log(`Received DELETE request to /api/devices/${req.params.id}`);
     removeDevice(res, req.params.id);
 });
 
@@ -116,13 +119,13 @@ const validateDevice = (device) => {
         _id: Joi.allow(""),
         name: Joi.string().min(3).required(),
         date: Joi.string().min(3).required(),
-        authenticity: Joi.string().min(3).required(),
+        authenticity: Joi.string().required(),
         condition: Joi.allow(""),
         description: Joi.allow(""),
         
        
     });
-
+    console.log("Validating device:", device);
     return schema.validate(device);
 };
 
